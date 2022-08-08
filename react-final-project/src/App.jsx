@@ -5,10 +5,10 @@ export default function App(){
         <h1>hola!</h1>
         <h1>hola!</h1>
         <h1>hola!</h1>
-        <h1>hola!</h1>
-        <h1>hola!</h1>
-        <h1>hola!</h1>
-        <h1>hola!</h1>
+        <h2>mundo</h2>
+        <h2>mundo</h2>
+        <h2>mundo</h2>
+        <h2>mundo</h2>
 
         </>
     )
