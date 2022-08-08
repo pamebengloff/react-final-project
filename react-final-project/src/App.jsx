@@ -9,7 +9,8 @@ export default function App(){
         <h2>mundo</h2>
         <h2>mundo</h2>
         <h2>mundo</h2>
-
+          
+        <p>que tal</p>
         </>
     )
 }
