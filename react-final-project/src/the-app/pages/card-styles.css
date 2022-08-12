@@ -1,0 +1,61 @@
+.card{
+    width: 50px;
+}
+
+.card-button{
+    background-color: rgb(92, 82, 102);
+    border: none;
+}
+
+.card:hover .card-button{
+    opacity: 1;
+    background-color: rgb(69, 9, 69);
+}
+
+.search-button{
+    background-color: rgb(92, 82, 102);
+    color:white;
+}
+
+.search-button:hover{
+    background-color: rgb(69, 9, 69);
+    color:white;
+}
+
+.card-img{
+    transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.card:hover .card-img{
+    opacity: 0.3;
+}
+
+.card:hover .card--button__play{
+    opacity: 1;
+}
+
+button{ /* para el boton de play con la imagen*/
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card--button__play{
+  transition: .5s ease;
+  opacity: .5;
+  position: absolute;
+  top: 140px;
+  left: 60px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.artist-link{
+    color: rgb(69, 9, 69);
+}
+
+.artist-link:hover{
+    color: rgb(69, 9, 69);
+}
