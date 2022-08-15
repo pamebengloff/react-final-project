@@ -40,8 +40,7 @@ export function Navbar(){
               About
               </NavLink>
             </li>
-         
-           
+
           <li className="nav-item ">   
               
               <Link className="nav-link dropdown-toggle " to="/" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
