@@ -1,10 +1,8 @@
 import {Link} from "react-router-dom"
 import { Container,Row,Col,Card, Button } from "react-bootstrap";
-import { songs } from "../data/songs"
-import { Artist } from "./Artist";
-import { SearchBar } from "../pages/SearchBar";
-import { CardGrid } from "./CardGrid";
-import "./searchbar-styles.css"
+import { FooterPlayer } from "./FooterPlayer";
+import { SearchBar } from "./SearchBar";
+import "./homesearchbar-styles.css"
 //import albumHP from './album_hopesandfears.jpg'; // Tell Webpack this JS file uses this image 
 
 export function Home(){ //el contenedor (componente padre de Artist, Album y Song)
@@ -12,6 +10,7 @@ export function Home(){ //el contenedor (componente padre de Artist, Album y Son
    
     return(
       <>
+      <div class="container-fluid">
       <h1 className="home-greet"> Welcome to Benglofffyy!</h1>
       <h4 className="home-description">
 
@@ -19,7 +18,7 @@ export function Home(){ //el contenedor (componente padre de Artist, Album y Son
       </h4>
       <SearchBar/>
       
-      
+      </div>
         </>
     )
 }

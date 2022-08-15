@@ -1,7 +1,7 @@
 import {Button} from "react-bootstrap"
 import {Link, useNavigate} from "react-router-dom"
 import { Song } from "./Song";
-import "./searchbar-styles.css"
+import "./homesearchbar-styles.css"
 
 export function SearchBar(){
 
@@ -11,7 +11,6 @@ export function SearchBar(){
         <>
         <div className="col-6">
           
-           
             <form >
                 <input type="text"
                 placeholder="Search a song"
@@ -19,12 +18,13 @@ export function SearchBar(){
                 name="searchText" //para poder tomar el valor del input y trabajar con el
                 autoComplete="off"
                 />
+                <button className="btn search-button mt-2"
+                    onClick={()=>{navigate("/songs")} }
+                    >Start
+                </button>
             </form>
           
-            <button className="btn search-button mt-1" 
-            onClick={()=>{navigate("/song")} }
             
-            >Start</button>
         </div>
 
      {/*   <div> aqui vamos a mostrar los resultados de la busqueda 

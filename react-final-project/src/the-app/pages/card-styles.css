@@ -1,3 +1,7 @@
+.container{
+    margin-top: 10px;
+}
+
 .card{
     width: 50px;
 }
@@ -13,12 +17,14 @@
 }
 
 .search-button{
-    background-color: rgb(92, 82, 102);
+    background-color: rgb(69, 9, 69);
     color:white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .search-button:hover{
-    background-color: rgb(69, 9, 69);
+    background-color: rgb(92, 82, 102);
     color:white;
 }
 

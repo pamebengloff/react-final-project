@@ -39,7 +39,7 @@ return (
   <> 
 
   <div>
-  <Button className="card-button" onClick={()=>{navigate(-1)} } >Go back</Button>
+  <Button className="card-button" onClick={()=>{navigate("/songs")} } >Go back</Button>
   <h1>{artistname} </h1> {/*uso del useParams para agarrar el param del url (artistname) */}
 
   </div>

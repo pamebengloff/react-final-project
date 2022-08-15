@@ -1,9 +1,10 @@
-import "./searchbar-styles.css"
+import "./homesearchbar-styles.css"
+import "./footerplayer-styles.css"
 
 export function About(){
     return(
         <>
-        <div >
+       <div class="container-fluid">
         <h1 className="home-greet">
             About page
         </h1>

@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+    color:black;
+    
+}
+
+h1{
+    font-family: 'Karla', sans-serif;
+}
+
+.login-button{
+    background-color: rgb(69, 9, 69);
+    border: none;
+    color:white;
+}
+
+.login-button:hover{
+    background-color: rgb(92, 82, 102);
+    color:white;
+}
+
+.brand-container{
+    padding:8px 12px;
+    
+}
+.navbar-brand{
+    color:black;
+    
+}
+.navbar-brand:hover{
+    color:black;
+}

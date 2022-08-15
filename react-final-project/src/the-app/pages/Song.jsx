@@ -4,13 +4,12 @@ import {SongCard} from "./SongCard"
 import { Container,Row,Col,Card, Button } from "react-bootstrap";
 import "./card-styles.css"
 
-export function Song(){
+export function Song(){ //componente que "saca del json songs.js" sus items y se los pasa a SongCard.jsx para acomodarlos allá
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
 //aqui vamos a sacar todos los titulos de las canciones, con un map y un p i guess
-  //  const songList= songs.map(song => <li key={song.id}>{song.song} </li>)
-  
+  //  const songList= songs.map(song => <li key={song.id}>{song.song} </li>)  
 /*
 const songList = songs.map(
   songs => (<p key={songs.artistid}>{songs.songtitle} </p> )
@@ -19,9 +18,9 @@ const songList = songs.map(
 //es que mmm como poner cada item en un card diferente
     return(
         <>
-<button className="btn search-button mt-1" onClick={()=>{navigate(-1)} } >Keep searching</button>
-        <div className="row rows-cols-1 row-cols-md-3">
-            
+      <button className="btn search-button mt-1" onClick={()=>{navigate("/")} } >Keep searching</button>
+      
+      <div className="row rows-cols-1 row-cols-md-3">
          {
            songs.map(
             song => (
