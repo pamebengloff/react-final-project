@@ -13,8 +13,8 @@ export function SongCard(
 }) 
 {
 
-//    const songImageUrl = `/assets/albums/${albumtitle}.jpg`
-const songImageUrl = "https://64.media.tumblr.com/270099db904a757d322dec9c8fbb5661/tumblr_onmbmgvZfJ1w437o4o3_500.jpg"
+    const songImageUrl = `/assets/albums/${albumtitle}.jpg`
+//const songImageUrl = "https://64.media.tumblr.com/270099db904a757d322dec9c8fbb5661/tumblr_onmbmgvZfJ1w437o4o3_500.jpg"
     return (
         <Container className="song-container">
         <Row>
