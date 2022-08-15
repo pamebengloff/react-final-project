@@ -31,3 +31,7 @@ h1{
 .navbar-brand:hover{
     color:black;
 }
+
+.login-nav{
+    text-align: right;
+}   

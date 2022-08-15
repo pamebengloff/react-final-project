@@ -12,14 +12,27 @@ export function Login(props) {
    
     return (
     <>
-
-    <div className="brand-container">
-  <img src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
-      <NavLink to="/login" className="navbar-brand" >Benglofffyy</NavLink>
-
-    </div>
-   
-
+<div id="login-nav">
+<nav class="navbar bg-color navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="">Tindog</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Pricing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Download</a>
+        </li>
+    </ul>
+ </div>
+</nav>
+</div>
         <div className='container mt-5'>
             <h1>Login</h1>
             <hr />

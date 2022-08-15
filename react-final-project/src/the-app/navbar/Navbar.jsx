@@ -18,9 +18,9 @@ export function Navbar(){
   
   return(
 <>
-<nav className="navbar navbar-expand-lg bg-color ">
-    
-      <div className="container-fluid ">
+
+<nav className="navbar navbar-expand-lg bg-color">    
+      <div className="container-fluid">
     <img src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
         <NavLink to="/" className="navbar-brand " >Benglofffyy</NavLink>
 
@@ -29,29 +29,29 @@ export function Navbar(){
         </button>
         <div className="collapse navbar-collapse " id="navbarNavDropdown">
        
-          <ul className="navbar-nav  justify-content-end">
-            <li className="nav-item  ">   
+          <ul className="navbar-nav  ms-auto ">
+            <li className="nav-item   ">   
              <NavLink to="/" className="nav-link" >
               Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item ">
              <NavLink to="/about"  className={({isActive}) => `nav-item nav-link ${isActive ? "active":""}`}>
               About
               </NavLink>
             </li>
          
            
-          <li className="nav-item justify-content-end">   
+          <li className="nav-item ">   
               
-              <Link className="nav-link dropdown-toggle" to="/" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle " to="/" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               <img className="img-user d-inline-block " src={userImg} alt="user"
               />
                 
               </Link>
-              <ul className="dropdown-menu ">
+              <ul className="dropdown-menu dropdown-menu-end ">
                 <li>
-                  <Link className="dropdown-item d-flex justify-content-center" to="/login"
+                  <Link className="dropdown-item d-flex  ms-auto" to="/login"
                       onClick={onLogout}>
                     Logout
                   </Link>
