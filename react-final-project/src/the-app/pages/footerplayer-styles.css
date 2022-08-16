@@ -1,5 +1,5 @@
 .footer-container{
-   position: fixed;
+   position:  fixed;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -9,7 +9,7 @@
    text-align: center;
 }
 .player-container{
- /*  border:1px solid white;*/
+   border:1px solid white;
    padding-top: 15px;
    height: 100%;
    width: 50%;

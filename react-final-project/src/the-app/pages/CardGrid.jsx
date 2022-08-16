@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import { Song } from "./Song";
 import "./card-styles.css"
 
+//realmente no estoy usando este componente
 export function CardGrid(){
 return(
     <Container className="cards-container">

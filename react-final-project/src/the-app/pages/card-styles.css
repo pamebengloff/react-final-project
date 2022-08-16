@@ -1,24 +1,40 @@
 .container{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.card{
-    width: 50px;
+.song-container{
+    margin-top: 0;
 }
 
-.card-button{
+.card{height: 10rem;
+    border-bottom: 1px thin  black;
+    border-top: 1px thin black;
+    border-left:   none;
+    border-right: none;
+    border-radius: 0;
+}
+
+.card-body{
+    width: 90%;
+    position: relative;
+    bottom:125px;
+    left:160px;
+}
+
+.addplaylist-button{
     background-color: rgb(92, 82, 102);
     border: none;
+    margin-top:3px;
 }
 
-.card:hover .card-button{
+.card:hover .addplaylist-button{
     opacity: 1;
     background-color: rgb(69, 9, 69);
+    
 }
 
 .search-button{
     background-color: rgb(69, 9, 69);
-    color:white;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -31,6 +47,10 @@
 .card-img{
     transition: .5s ease;
   backface-visibility: hidden;
+  width: 8rem;
+   position: relative;
+   top:15px;
+   left:10px;
 }
 
 .card:hover .card-img{
@@ -52,11 +72,13 @@ button{ /* para el boton de play con la imagen*/
   transition: .5s ease;
   opacity: .5;
   position: absolute;
-  top: 140px;
-  left: 60px;
+  top: 100px;
+  left: 40px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.img--button__play{width: 50px;}
 
 .artist-link{
     color: rgb(69, 9, 69);
@@ -64,4 +86,8 @@ button{ /* para el boton de play con la imagen*/
 
 .artist-link:hover{
     color: rgb(69, 9, 69);
+}
+
+.row{
+    margin: 0 10px 0 10px;
 }

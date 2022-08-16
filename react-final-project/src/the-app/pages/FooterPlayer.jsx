@@ -11,7 +11,8 @@ export function FooterPlayer( //recibimos los props de Song.jsx
 
     const albumImageUrl = "https://64.media.tumblr.com/4374a87e6c07c94da7f89b3c6d4ecb00/fdf5cb6f879e878c-1d/s400x600/4e1632ab70fb0e425f9360724f9643bb15c9c3eb.jpg"
     return(
-        <footer className="footer-container container-fluid" >
+        
+        <div className="footer-container " >
           <div className="player-container container-fluid">  
             <button className="btn-play">
                    <img className="img-play"src="https://64.media.tumblr.com/6d6a1fc357844bb59323253841de68a6/ee6d1c32f6a1245d-d0/s75x75_c1/9b496871ef6889d497c5abc3fad5d529fd83526f.png" alt="Play" />
@@ -31,6 +32,6 @@ export function FooterPlayer( //recibimos los props de Song.jsx
             </div> 
             </div>
           
-        </footer>
+        </div>
     )
 }

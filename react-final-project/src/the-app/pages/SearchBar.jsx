@@ -1,6 +1,6 @@
 import {Button} from "react-bootstrap"
 import {Link, useNavigate} from "react-router-dom"
-import { Song } from "./Song";
+import { Song } from "./SongRes";
 import "./homesearchbar-styles.css"
 
 export function SearchBar(){
@@ -19,7 +19,7 @@ export function SearchBar(){
                 autoComplete="off"
                 />
                 <button className="btn search-button mt-2"
-                    onClick={()=>{navigate("/songs")} }
+                    onClick={()=>{navigate("/songresults")} }
                     >Start
                 </button>
             </form>
