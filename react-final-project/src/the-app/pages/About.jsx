@@ -1,5 +1,5 @@
 import "./homesearchbar-styles.css"
-import "./footerplayer-styles.css"
+
 
 export function About(){
     return(

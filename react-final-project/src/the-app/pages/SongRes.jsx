@@ -14,12 +14,14 @@ const songList = songs.map(
   songs => (<p key={songs.artistid}>{songs.songtitle} </p> )
 )*/
 
+
+
 //es que mmm como poner cada item en un card diferente
     return(
         <>
   <button className="btn search-button mt-1" onClick={()=>{navigate("/")} } >Keep searching</button>
     {/*abajo del boton se va a llenar de rows y cols de las songcards */}  
-      <div className="song-container">
+      <div className="allsongcards-container">
          {
            songs.map(
             song => (

@@ -1,4 +1,5 @@
 import {NavLink, Link, useNavigate} from "react-router-dom"
+import {useRef} from "react"
 import { Home } from "../pages/Home";
 import { SearchBar } from "../pages/SearchBar";
 import "./navbar.css"
@@ -16,52 +17,65 @@ export function Navbar(){
    {replace: true}); //me llevara al login, y el replace evita que el user pueda regresar al historial anterior porque se esta reemplazando
   }
   
+  const navButton = useRef(null);
+  const linksContainerRef = useRef(null);
+
+  function collapseNav() {
+    navButton.current.classList.add("collapsed");
+    linksContainerRef.current.classList.remove("show");
+  }
+
   return(
 <>
 
-<nav className="navbar navbar-expand-lg bg-color">    
-      <div className="container-fluid">
-        {/*icono: */}
-    <img src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
-        <NavLink to="/" className="navbar-brand algo" >Benglofffyy</NavLink>
+<nav className="navbar sticky-top navbar-expand-md bg-color">    
+<div className="container-fluid">
+      <img className="brand-icon" src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
+      <NavLink to="/" className="navbar-brand" >Benglofffyy</NavLink>
 
-        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse " id="navbarNavDropdown">
-       
-          <ul className="navbar-nav  ms-auto ">
-            <li className="nav-item   ">   
-             <NavLink to="/" className="nav-link" >
+      <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+       ref={navButton}
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      
+      <div className="collapse navbar-collapse" id="navbarNavDropdown" aria-labelledby="defaultDropdown"
+         ref={linksContainerRef}>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item" >   
+             <NavLink  to="/"  className="nav-link" 
+                onClick={collapseNav}
+                >
               Home
               </NavLink>
             </li>
             <li className="nav-item ">
-             <NavLink to="/about"  className={({isActive}) => `nav-item nav-link ${isActive ? "active":""}`}>
+             <NavLink  to="/about"  className={({isActive}) => `nav-item nav-link ${isActive ? "active":""}`} 
+                onClick={collapseNav}
+                >
               About
               </NavLink>
             </li>
 
-          <li className="nav-item ">   
-              
-              <Link className="nav-link dropdown-toggle " to="/" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+          <li className="nav-item">   
+              <Link className="nav-link dropdown-toggle " to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
               <img className="img-user d-inline-block " src={userImg} alt="user"
-              />
-                
+              />  
               </Link>
-              <ul className="dropdown-menu dropdown-menu-end ">
+             <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
                 <li>
                   <Link className="dropdown-item d-flex  ms-auto" to="/login"
                       onClick={onLogout}>
                     Logout
                   </Link>
                 </li>
-              </ul>
+             </ul>
             </li>
           </ul>
          
         </div>
-      </div>
+     </div>
+    
      
     </nav>
     

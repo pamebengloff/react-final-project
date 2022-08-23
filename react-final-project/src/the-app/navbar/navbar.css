@@ -1,3 +1,8 @@
+.navbar{
+   
+   
+}
+
 .bg-color{
     background-color: rgb(183, 163, 203);
 }
@@ -24,3 +29,32 @@
   background-color: transparent;
   color: black;
 }
+
+
+
+/*@media (max-width:667px){  .navbar{background-color: red;} }*/
+    
+@media (max-width:379px){
+    .navbar{
+        background-color:red;
+    }
+
+    .navbar-toggler{
+        background-color: white;
+    }
+
+    .brand-icon{
+        width:40px;
+    }
+    .img-user{
+        width:25px;
+        height:25px;
+        margin: 0 5px 0 5px;
+    }   
+
+    .navbar-brand{
+        font-size: 25px;
+    }
+
+}
+ 

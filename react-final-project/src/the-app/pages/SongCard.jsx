@@ -1,8 +1,8 @@
 import { Container,Row,Col,Card, Button } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import { songs } from "../data/songs";
-import "./card-styles.css"
 import { FooterPlayer } from "./FooterPlayer";
+import "./card-styles.css"
 
 export function SongCard(
     {id,
@@ -18,7 +18,7 @@ export function SongCard(
     return (
         <>
 
-<Container className="song-container">
+<Container className="songcard-container">
         <Row>
           <Col>
            
@@ -42,7 +42,7 @@ export function SongCard(
                         <Card.Text>  {albumtitle} </Card.Text>
                         <Card.Text>  {artistname} </Card.Text> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
                         <Card.Text> 
-                {/*          <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>*/}
+                  {/*        <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>  */}
                          </Card.Text>
                       <Button className="addplaylist-button" >Add to playlist</Button>
                   </Card.Body>
