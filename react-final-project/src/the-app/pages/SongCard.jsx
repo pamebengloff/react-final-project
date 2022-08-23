@@ -24,23 +24,14 @@ export function SongCard(
            
           <Card className="card">
                   <Card.Img variant="bottom" className="card-img"  src={songImageUrl} />
-                <button className="card--button__play"
-             /*    onClick={ //experimento para pasarle todos los props al footer 
-                  songs.map(
-                     song => (
-                       <FooterPlayer key={song.id} 
-                       {...song} />
-                     )
-                   )
-                  } */
-                  >
+                <button className="card--button__play" >
                   <img src={playIconUrl} className="img--button__play" alt="Play" />
                  </button>
                  
-                  <Card.Body className="card-body">
-                      <Card.Title>  {songtitle} </Card.Title>
-                        <Card.Text>  {albumtitle} </Card.Text>
-                        <Card.Text>  {artistname} </Card.Text> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
+                  <Card.Body className="cardtext-body">
+                      <Card.Title className="card-title">  {songtitle} </Card.Title>
+                        <Card.Text className="cardsub-title">  {albumtitle} </Card.Text>
+                        <Card.Text className="cardsub-title">  {artistname} </Card.Text> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
                         <Card.Text> 
                   {/*        <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>  */}
                          </Card.Text>
