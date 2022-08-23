@@ -44,7 +44,9 @@ export function SongCard(
                         <Card.Text> 
                   {/*        <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>  */}
                          </Card.Text>
-                      <Button className="addplaylist-button" >Add to playlist</Button>
+                      <Button className="addplaylist-button" >
+                        <span>Add to playlist</span>
+                        </Button>
                   </Card.Body>
               </Card>
 

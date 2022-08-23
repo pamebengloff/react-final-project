@@ -3,7 +3,6 @@ import { SongSugestions } from "./SongSugestions";
 import "./homesearchbar-styles.css"
 
 export function Home(){ //el contenedor (componente padre de Artist, Album y Song)
-
    
     return(
       <>
@@ -14,7 +13,7 @@ export function Home(){ //el contenedor (componente padre de Artist, Album y Son
       </h4>
       <SearchBar/>  
      
-      <SongSugestions/>
+    {/*   <SongSugestions/>*/}
      
 
       </div>

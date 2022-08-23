@@ -18,7 +18,7 @@ export function FooterPlayer( //recibimos los props de Song.jsx
                    <img className="img-play"src="https://64.media.tumblr.com/6d6a1fc357844bb59323253841de68a6/ee6d1c32f6a1245d-d0/s75x75_c1/9b496871ef6889d497c5abc3fad5d529fd83526f.png" alt="Play" />
             </button>
            
-            <div className="info-container container-fluid">
+            <div className="info-container">
             
             <img  className="img-album" src={albumImageUrl} alt="album" />  
             
