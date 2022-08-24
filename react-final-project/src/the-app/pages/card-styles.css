@@ -13,6 +13,10 @@
 
 /*CONTENEDORES*/
 
+.row{
+    margin:0;
+  } 
+
 .container{ /*incluyendo el boton de keep searching*/
     margin-top: 40px;
 }
@@ -80,16 +84,14 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     border: none;
     margin: 0;
     padding: 0;
-  
     transition: .5s ease;
-  opacity: .5;
-  display: flex;
-  position: relative;
-  right:60px;
+    opacity: .5;
+    display: flex;
+    position: relative;
+    right:60px;
 }
 .img--button__play{ /*la img del boton de play en la cancion de la lista*/
-    width: 40px;
-    
+    width: 40px;   
 }
 
 .addplaylist-button{
@@ -141,8 +143,15 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     opacity: 1;
 }
 
+/*MEDIA QUERYS*/
 
 @media (max-width:767px){
+
+.container{
+    max-width: 90%;
+}
+
+
  .text-container{
     color:blue;
     padding-right: 40px;
@@ -157,15 +166,19 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 }
 
 
-@media (max-width:673px){
+@media (max-width:679px){
    
    /*CONTENEDORES*/
-    
+   
+   .container{
+    max-width: 100%;   
+}
+
     .text-container{
         color: red;
       padding-right: 30px;
     }
-
+    
     .addbutton-container{
         position: relative;
         left: 20px;
@@ -183,19 +196,26 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
       .cardalbum-title{
         display: none;
     }
-/*
-    .addplaylist-button{
-        margin-right: 15px;
-        font-size: 12px;
-        right:10px;
+
+@media (max-width:607px){
+
+    .container{
+        max-width: 100%;
     }
 
-    .card-title{
-        font-size: medium;
-        font-weight: bold;
-        margin:0;
-         
+    .text-container{
+        color:purple;
+      padding-right: 30px;
     }
 
-  */
+    .addbutton-container{
+        position: relative;
+        left: 20px;
+         width: 10%;
+         padding: 2px;
+     } 
+   
+
+}
+
 }
