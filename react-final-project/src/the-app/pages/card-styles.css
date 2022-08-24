@@ -169,11 +169,9 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 @media (max-width:679px){
    
    /*CONTENEDORES*/
-   
    .container{
     max-width: 100%;   
-}
-
+    }
     .text-container{
         color: red;
       padding-right: 30px;
@@ -192,12 +190,9 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
 
-      .cardalbum-title{
-        display: none;
-    }
-
-@media (max-width:607px){
+@media (max-width:579px){
 
     .container{
         max-width: 100%;
@@ -215,7 +210,8 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
          padding: 2px;
      } 
    
-
+     .cardalbum-title{
+        display: none;
+    }
 }
 
-}
