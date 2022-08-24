@@ -20,6 +20,8 @@
 .songcard-container{ /*separacion entre cada list item*/
     margin-bottom: 0;
     list-style: none; 
+   
+    padding: auto;
 }
 
 .card{ /*contenedor de los list items */
@@ -93,10 +95,9 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 .addplaylist-button{
     background-color: rgb(92, 82, 102);
     border-radius: 5px;
-    white-space: nowrap;
-    color:white;
-    height: 30px;
-    width: 150px;
+    white-space:wrap;
+    color:white;  
+    padding: 8px;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -140,24 +141,46 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     opacity: 1;
 }
 
-@media (max-width:528px){
-    .card{   
+
+@media (max-width:767px){
+ .text-container{
+    color:blue;
+    padding-right: 40px;
+  }
+
+  .card-title{       
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+}
+
+
+@media (max-width:673px){
+   
+   /*CONTENEDORES*/
+    
+    .text-container{
         color: red;
-        word-break: break-word;
-     /*   width: min-content;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        display: flex;
-        flex-direction: row;  
-      
-        border-bottom: 1px thin  black;
-        border-top: 1px thin black;
-        border-left:   none;
-        border-right: none;
-        border-radius: 0;
-     /*  */
+      padding-right: 30px;
     }
-    .cardalbum-title{
+
+    .addbutton-container{
+        position: relative;
+        left: 20px;
+         width: 10%;
+         padding: 2px;
+     } 
+   
+    /*TEXTOS*/
+    .card-title{       
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+      .cardalbum-title{
         display: none;
     }
 /*
@@ -171,10 +194,7 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
         font-size: medium;
         font-weight: bold;
         margin:0;
-        
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+         
     }
 
   */

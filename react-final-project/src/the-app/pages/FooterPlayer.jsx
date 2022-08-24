@@ -13,7 +13,7 @@ export function FooterPlayer( //recibimos los props de Song.jsx
     return(
         
         <div className="footer-container " >
-          <div className="player-container container-fluid">  
+          <div className="player-container container-fluid col-lg-4  col-md-6  col-sm-6">  
             <button className="btn-play">
                    <img className="img-play"src="https://64.media.tumblr.com/6d6a1fc357844bb59323253841de68a6/ee6d1c32f6a1245d-d0/s75x75_c1/9b496871ef6889d497c5abc3fad5d529fd83526f.png" alt="Play" />
             </button>
