@@ -21,7 +21,8 @@ const songList = songs.map(
         <>
   <button className="btn search-button mt-1" onClick={()=>{navigate("/")} } >Keep searching</button>
     {/*abajo del boton se va a llenar de rows y cols de las songcards */}  
-      <div className="row container-fluid">
+   
+    <ul className="songcard-container row container-fluid">
          {
            songs.map(
             song => (
@@ -30,9 +31,7 @@ const songList = songs.map(
             )
           )
          }
-          
-        </div>
-
+    </ul>
 
        </>
     )

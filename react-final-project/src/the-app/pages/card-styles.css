@@ -24,8 +24,8 @@
 .songcard-container{ /*separacion entre cada list item*/
     margin-bottom: 0;
     list-style: none; 
-   
     padding: auto;
+
 }
 
 .card{ /*contenedor de los list items */
@@ -35,32 +35,39 @@
     display: flex;
     flex-direction: row;  
     align-items: center;
+    
     border-bottom: 1px thin  black;
     border-top: 1px thin black;
     border-left:   none;
     border-right: none;
     border-radius: 0;
+    
 }
 
 .songbutton-container{
     width: 5rem;
     display: flex;
     align-items: center;
-   /* border: 1px solid;*/
+
 }
 
 .text-container{
     width: 50%;
-    padding: 0;
+    padding-left: 20px;
     word-break: break-word;
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 30px;
+   
+    
+    /*left: 30px;*/
 }
 
 .addbutton-container{
-    width: 50%;
+   /* border: 1px solid;*/
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    
 }
 /*IMAGENES Y BOTONES*/
 
@@ -103,8 +110,10 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     display: flex; 
     align-items: center;
     justify-content: center;
-}
 
+
+    
+}
 
 /*TEXTOS DE LA CARD*/
 
@@ -132,7 +141,8 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 .card:hover .addplaylist-button{
     opacity: 1;
     background-color: rgb(69, 9, 69);
-    
+    color:white;
+
 }
 
 .card:hover .song-img{
@@ -145,69 +155,31 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 
 /*MEDIA QUERYS*/
 
-@media (max-width:767px){
 
-.container{
-    max-width: 90%;
-}
+@media (max-width:576px){
 
 
- .text-container{
-    color:blue;
-    padding-right: 40px;
-  }
-
-  .card-title{       
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-}
+ }
 
 
-@media (max-width:679px){
-   
-   /*CONTENEDORES*/
-   .container{
-    max-width: 100%;   
-    }
-    .text-container{
-        color: red;
-      padding-right: 30px;
-    }
+
+@media (max-width:387px){
     
-    .addbutton-container{
-        position: relative;
-        left: 20px;
-         width: 10%;
-         padding: 2px;
-     } 
-   
-    /*TEXTOS*/
-    .card-title{       
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-@media (max-width:579px){
-
     .container{
         max-width: 100%;
     }
 
     .text-container{
-        color:purple;
-      padding-right: 30px;
+      color:purple;
+      padding-left: 5px;
+      padding-right: 5px;
     }
 
-    .addbutton-container{
-        position: relative;
-        left: 20px;
-         width: 10%;
-         padding: 2px;
+
+    .addplaylist-button span{
+       /* position: relative;
+        left: 40px;*/
+        font-size: 10px;
      } 
    
      .cardalbum-title{
