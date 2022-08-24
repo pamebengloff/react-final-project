@@ -8,63 +8,63 @@
 .search-button:hover{
     background-color: rgb(92, 82, 102);
     color:white;
+    
 }
 
+/*CONTENEDORES*/
 
-.container{
-    margin-top: 20px;
+.container{ /*incluyendo el boton de keep searching*/
+    margin-top: 40px;
 }
 
-.allsongcards-container{
-    margin-bottom: 160px;  
+.songcard-container{ /*separacion entre cada list item*/
+    margin-bottom: 0;
+    list-style: none; 
 }
 
-.songcard-container{
-    margin-top: 0;
-}
-
-.card{
+.card{ /*contenedor de los list items */
     height: 6rem;
+    padding-top: 50px;
+    padding-bottom: 50px;    
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
     border-bottom: 1px thin  black;
     border-top: 1px thin black;
     border-left:   none;
     border-right: none;
     border-radius: 0;
+}
+
+.songbutton-container{
+    width: 5rem;
     display: flex;
-    flex-direction: row;  
     align-items: center;
+   /* border: 1px solid;*/
 }
 
-.cardtext-body{
-   padding-left: 30px;
+.text-container{
+    width: 50%;
+    padding: 0;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 30px;
 }
 
-.addplaylist-button{
-    background-color: rgb(92, 82, 102);
-    border: none;
-    margin-top:3px;
+.addbutton-container{
+    width: 50%;
 }
+/*IMAGENES Y BOTONES*/
 
-.card:hover .addplaylist-button{
-    opacity: 1;
-    background-color: rgb(69, 9, 69);
-    
-}
-
-.card-img{
+.song-img{
     transition: .5s ease;
     backface-visibility: hidden;
     width: 5rem;
     height: 5rem;
-    border-radius: 0;
-}
-
-.card:hover .card-img{
-    opacity: 0.3;
-}
-
-.card:hover .card--button__play{
-    opacity: 1;
+    display: flex;
+  
 }
 
 button{ /* para el boton de play con la imagen y el del footer apparently*/
@@ -74,19 +74,36 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     padding: 0;
 }
 
-.card--button__play{
-  transition: .5s ease;
+.button__play{ /*el boton de play en la cancion de la lista*/
+    border: none;
+    margin: 0;
+    padding: 0;
+  
+    transition: .5s ease;
   opacity: .5;
-  position: absolute;
-  top: 48px;
-  left: 45px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  display: flex;
+  position: relative;
+  right:60px;
+}
+.img--button__play{ /*la img del boton de play en la cancion de la lista*/
+    width: 40px;
+    
 }
 
-.img--button__play{
-    width: 40px;
+.addplaylist-button{
+    background-color: rgb(92, 82, 102);
+    border-radius: 5px;
+    white-space: nowrap;
+    color:white;
+    height: 30px;
+    width: 150px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
+
+
+/*TEXTOS DE LA CARD*/
 
 .card-title{
     font-size: medium;
@@ -98,19 +115,67 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     font-size: small;
 }
 
-.artist-link{
-    color: rgb(69, 9, 69);
+/*.artist-link{   color: rgb(69, 9, 69);}
+.artist-link:hover{   color: rgb(69, 9, 69);}*/
+
+
+/*HOVER EFFECT*/
+
+.card:hover{
+    background-color: #f1f0f0;
+    opacity: 2;
 }
 
-.artist-link:hover{
-    color: rgb(69, 9, 69);
+.card:hover .addplaylist-button{
+    opacity: 1;
+    background-color: rgb(69, 9, 69);
+    
 }
 
-.addplaylist-button{
-    white-space: nowrap;
-    width:150px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card:hover .song-img{
+    opacity: 0.3;
+}
+
+.card:hover .button__play{
+    opacity: 1;
+}
+
+@media (max-width:528px){
+    .card{   
+        color: red;
+        word-break: break-word;
+     /*   width: min-content;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row;  
+      
+        border-bottom: 1px thin  black;
+        border-top: 1px thin black;
+        border-left:   none;
+        border-right: none;
+        border-radius: 0;
+     /*  */
+    }
+    .cardalbum-title{
+        display: none;
+    }
+/*
+    .addplaylist-button{
+        margin-right: 15px;
+        font-size: 12px;
+        right:10px;
+    }
+
+    .card-title{
+        font-size: medium;
+        font-weight: bold;
+        margin:0;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+  */
 }

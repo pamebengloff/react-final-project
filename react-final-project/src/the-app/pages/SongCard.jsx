@@ -16,35 +16,32 @@ export function SongCard(
     const songImageUrl = `/assets/albums/${albumtitle}.jpg`
 //const songImageUrl = "https://64.media.tumblr.com/270099db904a757d322dec9c8fbb5661/tumblr_onmbmgvZfJ1w437o4o3_500.jpg"
     return (
-        <>
-
-<Container className="songcard-container">
-        <Row>
-          <Col>
-           
-          <Card className="card">
-                  <Card.Img variant="bottom" className="card-img"  src={songImageUrl} />
-                <button className="card--button__play" >
+    <>
+    <ul className="songcard-container">
+         <li className="card container-fluid"> 
+            <div className="songbutton-container">
+                  <img  className="song-img" alt="song" variant="bottom"  src={songImageUrl} />
+                   <button className="button__play" >
                   <img src={playIconUrl} className="img--button__play" alt="Play" />
                  </button>
-                 
-                  <Card.Body className="cardtext-body">
-                      <Card.Title className="card-title">  {songtitle} </Card.Title>
-                        <Card.Text className="cardsub-title">  {albumtitle} </Card.Text>
-                        <Card.Text className="cardsub-title">  {artistname} </Card.Text> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
-                        <Card.Text> 
-                  {/*        <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>  */}
-                         </Card.Text>
-                      <Button className="addplaylist-button" >
-                        <span>Add to playlist</span>
-                        </Button>
-                  </Card.Body>
-              </Card>
-
-          </Col>
-        </Row>
-      </Container>
-      </>
+            </div>
+            <div className="text-container ">
+                      <p className="card-title">  {songtitle} </p>
+                        <p className="cardalbum-title cardsub-title">  {albumtitle} </p>
+                        <p className="cardsub-title">  {artistname} </p> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
+                  {/*   <Card.Text>     <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>   </Card.Text>  */}
+            </div>
+            <div className="addbutton-container">
+                      <button className="addplaylist-button " >
+                          <span>Add to playlist</span>
+                      </button>
+             </div>
+                  
+              
+     
+        </li>
+        </ul>
+    </>
     );
 }
 
