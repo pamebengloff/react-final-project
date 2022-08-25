@@ -21,7 +21,7 @@ const songList = songs.map(
         <>
     <SongCard/>
 
-    <ul className="songcard-container row container-fluid">
+    <ul className="songlist-container row container-fluid">
          {
            songs.map(
             song => (

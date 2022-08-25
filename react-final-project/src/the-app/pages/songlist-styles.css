@@ -3,16 +3,16 @@
 .row{
     margin:0;
   } 
+/*
+.container{ 
+    border: 1px solid;
+}*/
 
-.container{ /*incluyendo el boton de keep searching*/
-    margin-top: 40px;
-}
-
-.songcard-container{ /*separacion entre cada list item*/
+.songlist-container{ /*separacion entre cada list item*/
+  /*  border: 1px solid;*/
     margin-bottom: 0;
     list-style: none; 
     padding: auto;
-
 }
 
 .card{ /*contenedor de los list items */
@@ -309,7 +309,7 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 
     @media (max-width:266px){
     
-           .songcard-container .card{
+           .songlist-container .card{
             width: 100%;
             height: 20px;
             position: relative;
