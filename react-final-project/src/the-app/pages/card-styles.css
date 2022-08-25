@@ -48,7 +48,6 @@
     width: 5rem;
     display: flex;
     align-items: center;
-
 }
 
 .text-container{
@@ -58,16 +57,13 @@
     display: flex;
     flex-direction: column;
    
-    
-    /*left: 30px;*/
 }
 
 .addbutton-container{
-   /* border: 1px solid;*/
     width: 25%;
     display: flex;
     flex-direction: row;
-    
+    margin-right: 5px;
 }
 /*IMAGENES Y BOTONES*/
 
@@ -94,11 +90,12 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     transition: .5s ease;
     opacity: .5;
     display: flex;
-    position: relative;
-    right:60px;
+   
 }
 .img--button__play{ /*la img del boton de play en la cancion de la lista*/
     width: 40px;   
+    position: relative;
+    right:60px;
 }
 
 .addplaylist-button{
@@ -110,9 +107,6 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     display: flex; 
     align-items: center;
     justify-content: center;
-
-
-    
 }
 
 /*TEXTOS DE LA CARD*/
@@ -156,34 +150,201 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 /*MEDIA QUERYS*/
 
 
-@media (max-width:576px){
-
-
- }
-
-
-
-@media (max-width:387px){
+@media (max-width:768px){ /*MEDIANO*/
     
-    .container{
-        max-width: 100%;
+    .card{
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .text-container{
-      color:purple;
-      padding-left: 5px;
-      padding-right: 5px;
+      /*  color: red;*/
+        margin-right: 10px;
     }
 
-
+    .card-title{       
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     .addplaylist-button span{
-       /* position: relative;
-        left: 40px;*/
+        font-size: 12px;
+     } 
+
+    
+ }
+
+@media(max-width:576px) { /*SMALL*/
+    
+    .text-container{
+       /* color: blue;*/
+        padding-right: 5px;
+    }
+
+    .card-title{       
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+    .cardalbum-title{
+        display: none;
+    }
+
+}
+
+@media(max-width:510px) { /*SMALL ISH*/
+    .card{
+        height: 4rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+.songbutton-container{
+   /* border: 1px solid;*/
+    width:50px;
+    align-items: center;
+   
+}
+
+    .song-img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .img--button__play{ /*la img del boton de play en la cancion de la lista*/
+        width: 20px;  
+        position: relative;
+        right:40px; 
+    }
+   
+    .text-container{
+      /*  color:gray;*/
+        padding-right: 10px; 
+      
+    }
+    .addbutton-container{
+        
+      /*  justify-content: flex-end;*/
+        width: 51px;
+    }
+       
+    .addplaylist-button span{
+         font-size: 12px;
+     } 
+     .card-title{      
+        font-size: small; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width:457px){ /*movil*/
+    .text-container{
+     /* color:purple;*/
+      padding-left: 5px;
+      margin-right: 10px;
+      display: flex;
+      
+    }
+
+    .song-img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .img--button__play{ /*la img del boton de play en la cancion de la lista*/
+        width: 20px;  
+        position: relative;
+        right:40px; 
+    }
+
+    .addbutton-container{
+        margin-right:0;  
+    }
+    .addplaylist-button{
+        height: 40px;
+    }
+    .addplaylist-button span{
         font-size: 10px;
      } 
    
-     .cardalbum-title{
-        display: none;
+     .card-title{      
+        font-size: small; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
+    @media (max-width:305px){
+
+        .card{
+            display: flex;
+            justify-content:flex-start;
+        }
+        
+        .text-container{
+            width: 80px;
+        }
+
+        .card.addbutton-button{
+            
+            margin-right:0; 
+           
+            position: relative;
+            right: 20px;
+        }
+        
+        .addplaylist-button span{
+            font-size: 10px;
+         } 
+    }
+
+    @media (max-width:266px){
+    
+           .songcard-container .card{
+            width: 100%;
+            display: flex;
+          
+            height: 20px;
+           }
+
+          .songbutton-container .song-img{
+        /*    border: solid 1px;*/
+            width: 30px;
+            height: 30px;
+          }
+           
+
+           .button__play{
+            position: relative;
+            left:15px;
+           }
+           .text-container .card-title{
+            width: 100%;
+        /*    border: solid 1px;*/
+            position: relative;
+            left: -10px;
+            bottom:5px;
+           }
+         
+           .cardsub-title{
+            display: none;
+           }
+
+           .addbutton-container{
+            width: 0%;
+            position: relative;
+            left: -20px;
+            bottom:1px;
+         
+        }
+    
+        .addplaylist-button span{
+            font-size: 10px;
+            
+         } 
+    }
+
 }
 

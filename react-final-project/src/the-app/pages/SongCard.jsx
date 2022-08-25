@@ -51,29 +51,28 @@ export function SongCard(
 return (
     <>
    
-   
-         <li className="card  container-fluid"> 
-            <div className="songbutton-container col-lg-4 col-md-6 col-sm-1">
+         <li className="card container-fluid container-sm"> 
+            <div className="songbutton-container col-lg-4 col-md-6 col-sm-6">
                   <img  className="song-img  mx-auto" alt="song" variant="bottom"  src={songImageUrl} />
                    <button className="button__play" >
                   <img src={playIconUrl} className="img--button__play" alt="Play" />
                  </button>
             </div>
-            <div className="text-container col-lg-4 col-md-6 col-sm-4 ">
+            <div className="text-container col-lg-4 col-md-6 col-sm-6 col-xs-6">
                       <p className="card-title "   data-bs-toggle="tooltip"  data-bs-title={songtitle}>  {songtitle} </p>
                         <p className="cardalbum-title cardsub-title">  {albumtitle} </p>
                         <p className="cardsub-title">  {artistname} </p> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}
                   {/*   <Card.Text>     <Link className="artist-link" to={`/artist/${artistname} `} > {artistname} </Link>   </Card.Text>  */}
 
             </div>
-            <div className="addbutton-container col-lg-4 col-md-6 col-sm-3 ">
+            <div className="addbutton-container col-lg-4 col-md-6 col-sm-6 col-xs-6 justify-content-xs-end">
                
                 <button className="btn addplaylist-button" >
                   <span>Add to playlist</span>
                 </button>
             </div>
                   
-              
+          
      
         </li>
        

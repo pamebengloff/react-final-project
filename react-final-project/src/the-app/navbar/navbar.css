@@ -48,7 +48,7 @@
     }   
 
     .navbar-brand{
-        font-size: 25px;
+        font-size: 20px;
     }
 
 }
@@ -57,5 +57,17 @@
 @media (max-width:266px){
     .navbar{
         background-color:yellow;
+        width: 100%;
+
     }
+    .brand-icon{
+        width:40px;
+    }
+
+    .navbar-brand{
+       /* font-size: 15px;*/
+        display: none;
+    }
+   
+ 
 }
