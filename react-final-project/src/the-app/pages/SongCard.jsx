@@ -8,8 +8,7 @@ export function SongCard(){
     <>
        <button className="btn search-button mt-1" onClick={()=>{navigate("/")} } >Keep searching</button>
         
-       <h1>holaaaaaaaaaaa</h1>
-       <h1>mundoooooooooooooooooooooo</h1>
+      
     </>
     )
 }
