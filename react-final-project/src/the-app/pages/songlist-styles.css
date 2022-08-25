@@ -216,9 +216,10 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     }
 
     .img--button__play{ /*la img del boton de play en la cancion de la lista*/
+       /* border: 1px solid;*/
         width: 20px;  
         position: relative;
-        right:40px; 
+        right:35px; 
     }
    
     .text-container{
@@ -257,8 +258,8 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 
     .img--button__play{ /*la img del boton de play en la cancion de la lista*/
         width: 20px;  
-        position: relative;
-        right:40px; 
+     /*   position: relative;
+        right:40px; */
     }
 
     .addbutton-container{
@@ -323,7 +324,7 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
         
            .button__play{
             position: relative;
-            left:15px;
+            right:13px;
            }
 
            .text-container{
@@ -334,11 +335,10 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
             left: -15px;
             bottom:0px;
            }
-         
 
-.plus-button{
-    display: flex;
-}
+            .plus-button{
+            display: flex;
+            }
     }
 
 
