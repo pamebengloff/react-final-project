@@ -3,7 +3,7 @@ import { Album } from "./Album"
 import { getArtistById } from "../helpers/getArtistById";
 import {Navigate, useNavigate, useParams} from "react-router-dom"
 import { Container,Row,Col,Card, Button } from "react-bootstrap";
-import "./card-styles.css"
+import "./songlist-styles.css"
 
 export function Artist(){
 
