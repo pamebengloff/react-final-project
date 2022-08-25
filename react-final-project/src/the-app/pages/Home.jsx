@@ -1,6 +1,7 @@
 import { SearchBar } from "./SearchBar";
 import { SongSugestions } from "./SongSugestions";
 import "./homesearchbar-styles.css"
+import { SongRes } from "./SongRes";
 
 export function Home(){ //el contenedor (componente padre de Artist, Album y Song)
    
@@ -12,7 +13,7 @@ export function Home(){ //el contenedor (componente padre de Artist, Album y Son
      Type your favorite song and find similar songs!
       </h4>
       <SearchBar/>  
-     
+
     {/*   <SongSugestions/>*/}
      
 

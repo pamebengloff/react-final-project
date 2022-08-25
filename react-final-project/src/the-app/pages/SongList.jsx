@@ -2,7 +2,7 @@
 //import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { songs } from "../data/songs";
-import "./card-styles.css"
+import "./songlist-styles.css"
 
 
 export function SongList(
