@@ -5,8 +5,8 @@ export function SongCard(){
 
     const navigate = useNavigate();
 
-    const songImageUrl = "https://64.media.tumblr.com/270099db904a757d322dec9c8fbb5661/tumblr_onmbmgvZfJ1w437o4o3_500.jpg"
-   // const songImageUrl ="https://www.pngitem.com/pimgs/m/111-1115149_northern-giraffe-deer-drawing-cartoon-giraf-drawing-transparent.png"
+   // const songImageUrl = "https://64.media.tumblr.com/270099db904a757d322dec9c8fbb5661/tumblr_onmbmgvZfJ1w437o4o3_500.jpg"
+    const songImageUrl ="https://www.pngitem.com/pimgs/m/111-1115149_northern-giraffe-deer-drawing-cartoon-giraf-drawing-transparent.png"
     return(
     <>
 <div className="container">
