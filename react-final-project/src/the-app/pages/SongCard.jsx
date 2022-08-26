@@ -10,9 +10,10 @@ export function SongCard(){
     return(
     <>
 <div className="container">
-<div className="songcard-container container-fluid col-sm ">
   
-    <span className="btn keepsearch-button " onClick={()=>{navigate("/")} } >Keep searching</span>     
+<div className="songcard-container container-fluid col-sm ">
+<span className="btn keepsearch-button " onClick={()=>{navigate("/")} } >Keep searching</span>     
+
     
     <div className="songimg-container">
       
