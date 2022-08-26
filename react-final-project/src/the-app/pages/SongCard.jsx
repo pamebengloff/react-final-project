@@ -27,5 +27,4 @@ export function SongCard(){
  </div>
     </>
     )
->>>>>>> featureSongCard
 }
