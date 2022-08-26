@@ -9,23 +9,22 @@ export function SongCard(){
     const songImageUrl ="https://www.pngitem.com/pimgs/m/111-1115149_northern-giraffe-deer-drawing-cartoon-giraf-drawing-transparent.png"
     return(
     <>
-
-     <div className="container">
+  <div className="container">
     <button className="btn search-button " onClick={()=>{navigate("/")} } >Keep searching</button>
-  
-    <div className="songcard-container container-fluid col col-sm ">
+
+    <div className="songcard-container container-fluid col-sm ">
         
       <div className="songimg-container">
        <img className="song-result-img img-fluid " src={songImageUrl} alt="searched song" />
-       </div>
-        <div className="songtext-container">
+       
+    </div>
+  
+    <div className="songtext-container">
         <p >title</p>
         <p >title</p>
         </div>
     </div>
-
     </div>
-
     </>
     )
 }
