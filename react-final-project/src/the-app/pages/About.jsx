@@ -1,4 +1,4 @@
-import "./homesearchbar-styles.css"
+import "./home-styles.css"
 
 
 export function About(){

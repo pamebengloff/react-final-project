@@ -1,17 +1,16 @@
 import {Button} from "react-bootstrap"
 import {Link, useNavigate} from "react-router-dom"
 import { SongRes } from "./SongRes";
-import "./homesearchbar-styles.css"
-
+//import "./homesearchbar-styles.css"
+import "./searchbar-styles.css"
 export function SearchBar(){
 
     const navigate = useNavigate();
 
     return(
         <>
-        <div className="col-6">
-          
-            <form >
+        <div className="col-6 ">
+        <form >
                 <input type="text"
                 placeholder="Search a song"
                 className="form-control"
@@ -23,7 +22,7 @@ export function SearchBar(){
                     >Start
                 </button>
             </form>
-          
+        
         </div>
 
      {/*   <div> aqui vamos a mostrar los resultados de la busqueda 

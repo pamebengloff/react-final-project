@@ -1,0 +1,41 @@
+.search-button{
+    background-color: rgb(69, 9, 69);
+    border: none;
+    color:white;
+}
+.search-button:hover{
+    
+    background-color: rgb(92, 82, 102);
+    color:white;
+}
+
+
+    .form-control__input {
+        width: 100%;
+        padding: 12px 24px;
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #575756;
+        background-color: transparent;        
+         }
+
+    .form-control::placeholder {
+            color: color(#575756 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+    }
+    
+    .form-control:hover,
+    .form-control:focus {
+            padding: 12px 12px;
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #575756;
+            border-radius: 0;
+            background-position: 100% center;
+            }
+    

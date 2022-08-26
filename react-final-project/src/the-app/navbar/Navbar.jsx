@@ -42,6 +42,8 @@ export function Navbar(){
       <div className="collapse navbar-collapse" id="navbarNavDropdown" aria-labelledby="defaultDropdown"
          ref={linksContainerRef}>
           <ul className="navbar-nav ms-auto">
+            
+          
             <li className="nav-item" >   
              <NavLink  to="/"  className="nav-link" 
                 onClick={collapseNav}

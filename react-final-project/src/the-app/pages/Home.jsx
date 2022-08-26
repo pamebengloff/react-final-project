@@ -1,6 +1,6 @@
 import { SearchBar } from "./SearchBar";
 import { SongSugestions } from "./SongSugestions";
-import "./homesearchbar-styles.css"
+import "./home-styles.css"
 import { SongRes } from "./SongRes";
 
 export function Home(){ //el contenedor (componente padre de Artist, Album y Song)

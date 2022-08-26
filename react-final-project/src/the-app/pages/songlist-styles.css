@@ -9,8 +9,8 @@
 }*/
 
 .songlist-container{ /*separacion entre cada list item*/
-  /*  border: 1px solid;*/
-    margin-bottom: 0;
+  /*  border: 1px solid;*/ 
+  margin-bottom: 0;
     list-style: none; 
     padding: auto;
 }
@@ -23,8 +23,8 @@
     flex-direction: row;  
     align-items: center;
     
-    border-bottom: 1px thin  black;
-    border-top: 1px thin black;
+    border-bottom: thin  black;
+    
     border-left:   none;
     border-right: none;
     border-radius: 0;
