@@ -1,5 +1,5 @@
 .container{
-    padding: 0;
+    padding:0 10px 0 10px;
 }
 
 .songcard-container{
@@ -11,26 +11,45 @@
     margin:0;
     padding: 0;
 }
+/*
 .keepsearch-button{
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: rgb(69, 9, 69);
     color:white;   
     opacity:1;
-}
-
-.keepsearch-button:hover{
-    background-color: rgb(92, 82, 102);
-    color:white;   
-    border: none; 
-}
+    display: flex;
+    width: fit-content;
+    padding: 2px 10px 2px 2px;
+    border-radius: 0 10px  10px 0 ;
+}*/
 
 .songimg-container{
     border: 1px solid;
     width: 50%;
     max-height: 200px;
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
+
+.songimg-container .keepsearch-button{
+    background-color: rgb(69, 9, 69);
+    color:white;   
+    padding: 2px 10px 2px 2px;
+    border-radius: 0 10px  10px 0 ;
+    border: solid 1px;
+    border-left: none;
+    opacity:1;
+    position: absolute;
+    width: 80px;
+}
+
+.songimg-container .keepsearch-button:hover{
+    background-color: rgb(92, 82, 102);
+    border: solid 1px;
+    color:white;   
+    border-left: none;
+}
+
 .song-result-img{
     width: 100%;
     object-fit: cover;
