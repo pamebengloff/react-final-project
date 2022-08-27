@@ -20,8 +20,8 @@ export function SongCard(){
     </div>
   
     <div className="songtext-container">
-        <p >title</p>
-        <p >title</p>
+        <h1 >Somewhere Only We Know</h1>
+        <h3 >Keane</h3>
     </div>
  </div>
  </div>

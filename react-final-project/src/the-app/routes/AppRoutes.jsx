@@ -28,9 +28,7 @@ export function AppRoutes() {
             {  /*404 page to Home cualquier direccion te llevara al home */}
         </Routes>
       </div>
-      <div className="footer-container">
-        <FooterPlayer/>
-    </div>
+   
        </>
     )
 }
