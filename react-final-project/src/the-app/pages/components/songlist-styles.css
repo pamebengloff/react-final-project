@@ -111,41 +111,37 @@ text-align: center;
 .playPause{
     border-radius: 50%;
   /*  border: 1px solid blue;*/
-
     background: none;
   /*  color: rgb(69, 9, 69);*/   
  color:white;
     font-size: 40px;
     position: relative;
     display: flex;
-  
-  
 }
 
-.playPause:hover{
-    opacity: .5;
-    color:black;
-}
-
+/*
 .addplaylist-button{
     background-color: rgb(92, 82, 102);
-    border-radius: 5px;
-   
-    color:white;  
-   
+    border-radius: 5px; 
+    color:white;     
     display: flex; 
     align-items: center;
     justify-content: center;
 margin-bottom: 10px;
 }
-
 .plus-img{
     width: 15px;
     transition: .5s ease;
     opacity: .5;
 }
+*/
 
 /*HOVER EFFECT*/
+.song-row:hover .playPause{
+   /* background-color: #f1f0f0;*/
+    opacity: 2;
+    color:black;
+}
 
 .song-row:hover{
     background-color: #f1f0f0;

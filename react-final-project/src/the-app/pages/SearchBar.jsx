@@ -5,6 +5,7 @@ import { SongCard } from "./components/SongCard";
 import {SongList} from "./components/SongList";
 import {pass} from "./pass.js"
 import "./searchbar-styles.css"
+import EmptyTracklist from "./components/EmptyTracklist";
 
 export function SearchBar(){
 
@@ -20,6 +21,11 @@ export function SearchBar(){
 
     const [isLoading, setIsLoading] = useState(true);
 
+    const [id, setId] = useState("");
+
+   const CLIENT_ID= "ae3ff2b95ca7497d81bf6f10c56325c7";
+   const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
+
     /*API access token*/
     useEffect( ()=>{
     var authParameters = { //this gives the specific rules for the fetch
@@ -27,7 +33,7 @@ export function SearchBar(){
            headers: {
                "Content-Type": "application/x-www-form-urlencoded"
            },
-           body:"grant_type=client_credentials&client_id=" + pass.CLIENT_ID+ "&client_secret="+pass.CLIENT_SECRET
+           body:"grant_type=client_credentials&client_id=" + CLIENT_ID+ "&client_secret="+CLIENT_SECRET
     }
 
     const CheckError= (result)=> { 
@@ -58,8 +64,8 @@ export function SearchBar(){
         },[accessToken]
     )
  
-     /*SEARCH FUNCTION*/
-     async function searchTrack(input){ //async bc we'll make a lot of search petitions to the api
+        /*SEARCH FUNCTION*/
+    async function searchTrack(input){ //async bc we'll make a lot of search petitions to the api
         console.log("Buscaste: "+ input);
         console.log("su length es de:"+ input.length);
 
@@ -75,67 +81,61 @@ export function SearchBar(){
 
 
 //GET ID TRACK - primero checas que el input no este feo
-let cancel= false;
-if(input.length <= 0  || undefined){
 
-    cancel=true;
-
-    console.log("input vacio");
-        return;
-    //to cancel the request
-  
-  }else{
     var IDTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
         .then(response => response.json() )
         .then(data => {            
             return (
             data.tracks?.items[0]?.id
-           
+        //    setIsLoading(false)
         );
         });
         if( IDTrack === undefined  ) return;
         
         console.log("el IDTrack es: "+ IDTrack);
+      
+        
 
 //GET DATA OF THE SEARCHED TRACK
 var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
         .then(response => response.json() )                        
         .then( data => {
             setDataTrack(data?.tracks?.items[0]);
-            //console.log(data.tracks.items[0])
+            console.log(data.tracks.items[0])
         }
     ); 
  
-}  
+ 
+
+
+
 
 
 //GET RECOMMENDATIONS BASED ON IDTRACK that you searched ;)
-let cancel2= false;
-if(IDTrack.length <= 0  || undefined){
-    console.log("ID vacio") 
-  
-    cancel2=true;
-
-  
-        return;        
-
-  }else{
- 
-var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?limit=10&seed_tracks="+ IDTrack, trackParameters)
+ var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?limit=10&seed_tracks="+ IDTrack, trackParameters)
         .then(response => response.json() )
         .then(data => {
            console.log("tracklist: ")
             console.log( data.tracks)
             setTrackList(data.tracks)
+            
+           
         }
-        
+       
+
     ) 
-}
+
+  /*  const tracklistEmpty = () =>{
+    if( trackList.length === 0){
+        console.log("tracklist vacio")
+       return(
+           <EmptyTracklist />
+        )
+    }}*/
+
     setIsShown(true); //only show element on click, show most up to date state
-          
+   
 } //end searchTrack method
-
-
 
     //to catch the input introduced
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -155,7 +155,7 @@ var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?
     <>
     <form>
         
-    <div className="form-group">
+    <div className="form-group col-6">
             <input 
            className="form-control"
                 type="text"
@@ -169,23 +169,31 @@ var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?
     </div>
     <div className="form-group">
         <button
-            className="search-button btn"
+            className="search-button btn col-1"
             type="submit"
             onClick={handleSubmit(onSubmit)}>
             Search
         </button>
     </div>
     </form>
-    {isShown &&   <SongCard dataTrack={dataTrack}/>  }
+    
+
+   { isShown &&  <SongCard dataTrack={dataTrack} />  } 
 
     <Outlet />
-
-    { trackList.map( (trackList)=>{
+{
+     
+       
+     trackList.map( (trackList)=>{
         return(
+
+       
+
          <SongList  trackList={trackList} key={trackList.id.toString()} />               
         )
        } 
       )
+ 
     }
 
     </>

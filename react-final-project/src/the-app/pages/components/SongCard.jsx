@@ -8,16 +8,14 @@ export function SongCard({dataTrack}){
 
  //   const navigate = useNavigate();
 
-  
 
-  //  console.log("hola desde song card")   
+ 
+
+    console.log("hola desde song card")   
     return(
 <>
 
-  { 
-    dataTrack.id === undefined ? ( <h1>No se halló la canción</h1> ) : (
-
-<div className="songcard-container container-fluid col-sm ">
+  <div className="songcard-container container-fluid col-sm ">
     <div className="songimg-container">
    
         <img className="song-result-img img-fluid " src={dataTrack.album.images[0].url} alt="searched song" />
@@ -32,10 +30,7 @@ export function SongCard({dataTrack}){
     </div>
 
    
- </div>
-
-)
-}
-    </>
+  </div>
+</>
     )
 }
