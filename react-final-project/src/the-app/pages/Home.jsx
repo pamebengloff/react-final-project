@@ -8,13 +8,13 @@ export function Home(){ //el contenedor (componente padre de Artist, Album y Son
 
 
 <div className="container-fluid">
-  <div className="row">
+  <div className="row home-row">
     <div className="col">
          <h1 className="home-greet"> Welcome to Benglofffyy!</h1>
     </div>
   </div>
 
-  <div className="row">
+  <div className="row home-row">
     <div className="col">
     <h4 className="home-description">Type a song and find recommendations!   </h4>
     </div>
