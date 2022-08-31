@@ -38,11 +38,12 @@ return (
         <p className="cardalbum-title cardsub-title">  {trackList.album.name} </p>
         <p className="cardsub-title">  {trackList.artists[0].name} </p> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}           
     </div>
-
     <div className="col-sm audioplayerDIV ">
         <AudioPlayer trackList={trackList}  currentSong={trackList.preview_url}  />        
     </div>
-
+<div className="col-sm"></div>
+    
+{/*
     <div className="col-sm">
     {isDesktop ?
                ( <button className="btn addplaylist-button" >
@@ -54,7 +55,7 @@ return (
            
             }
     </div>
-
+*/}
   </div>
 </div>
 

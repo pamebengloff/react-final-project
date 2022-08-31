@@ -165,8 +165,11 @@ export function SearchBar(){
 
     return(
     <>
-    <form >
+    <form>
+        
+    <div className="form-group">
             <input 
+           className="form-control"
                 type="text"
                 id="searchInput"
                 placeholder="Search song"
@@ -175,14 +178,16 @@ export function SearchBar(){
             />
             {errors.searchInput && errors.searchInput.type === "required" && 
         (<span role="alert" className='text-danger'>You need to type a song</span>)}
-
+  </div>
+  <div class="form-group">
         <button
-            className="search-button"
+            className="search-button btn"
             type="submit"
             onClick={handleSubmit(onSubmit)}
         >
             Search
         </button>
+        </div>
     </form>
     {isShown &&   <SongCard dataTrack={dataTrack}/>  }
 

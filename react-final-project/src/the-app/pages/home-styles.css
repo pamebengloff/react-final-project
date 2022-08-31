@@ -11,11 +11,26 @@ body{
 
 h1{
     font-family: 'Karla', sans-serif;
+    word-break: break-word;
+
 }
 
 .home-greet{
     padding: 40px 0 40px 0;
+    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .home-description{
     padding: 1px 0 20px 0;
+
+    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.about-row{
+    border:none;
 }
