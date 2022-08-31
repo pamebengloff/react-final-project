@@ -5,9 +5,9 @@ export function About(){
     return(
         <>
 
-<div class="container">
-  <div class="row about-row">
-    <div class="col-sm">
+<div className="container">
+  <div className="row about-row">
+    <div className="col-sm">
     <h1 className="home-greet">
             About
         </h1>
@@ -18,8 +18,8 @@ export function About(){
   
   </div>
 
-  <div class="row about-row">
-    <div class="col-sm">
+  <div className="row about-row">
+    <div className="col-sm">
   
     <h3>What does it do?</h3>
 
