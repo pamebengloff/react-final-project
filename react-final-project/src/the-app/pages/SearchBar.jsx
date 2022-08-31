@@ -28,8 +28,6 @@ export function SearchBar(){
 
  
     /*ID's spotify api*/
- //    pass.CLIENT_ID;
- //   const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
 
     /*API access token*/
     useEffect( ()=>{
