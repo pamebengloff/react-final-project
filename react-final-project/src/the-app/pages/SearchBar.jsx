@@ -11,9 +11,7 @@ import "./searchbar-styles.css"
 
 import {pass} from "./pass.js"
 
-//import { AudioPlayer } from "./components/AudioPlayer";
 
-//padre de SongCard... 
 export function SearchBar(){
 
     /*Navigation*/
@@ -27,8 +25,6 @@ export function SearchBar(){
     const [isShown, setIsShown] = useState(false);
 
  
-    /*ID's spotify api*/
-
     /*API access token*/
     useEffect( ()=>{
     var authParameters = { //this gives the specific rules for the fetch
@@ -75,13 +71,10 @@ export function SearchBar(){
    )
 
  
-
     /*SEARCH FUNCTION*/
     async function searchTrack(input){ //async bc we'll make a lot of search petitions to the api
             console.log("Buscaste: "+ input);
             console.log("su length es de:"+ input.length);
-
-         //   console.log("hola desde searchTrack");
 
         //get request to get track you input
         var trackParameters = {
@@ -93,43 +86,33 @@ export function SearchBar(){
         }
 
 
-        let cancel= false;
+    
     //GET ID TRACK - primero checas que el input no este feo
-      if(input.length <= 0  || undefined){
+    let cancel= false;
+    if(input.length <= 0  || undefined){
 
         cancel=true;
 
         console.log("input vacio");
             return;
         //to cancel the request
-
-       
-
-   
-
+      
       }else{
         var IDTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
             .then(response => response.json() )
-            .then(data => {
-
-
-             
-
+            .then(data => {            
                 return (
                 data.tracks?.items[0]?.id
                
-            //    , data.tracks.items[1].id
             );
             });
             if( IDTrack === undefined  ) return;
-
             
             console.log("el IDTrack es: "+ IDTrack);
 
-        //GET DATA OF THE SEARCHED TRACK
-        var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
-            .then(response => response.json() )
-                        
+    //GET DATA OF THE SEARCHED TRACK
+    var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
+            .then(response => response.json() )                        
             .then( data => {
                 setDataTrack(data?.tracks?.items[0]);
                 //console.log(data.tracks.items[0])
@@ -139,9 +122,8 @@ export function SearchBar(){
     }  
  
 
-
+    //GET RECOMMENDATIONS BASED ON IDTRACK that you searched ;)
     let cancel2= false;
-
     if(IDTrack.length <= 0  || undefined){
         console.log("ID vacio") 
       
@@ -151,8 +133,8 @@ export function SearchBar(){
             return;        
 
       }else{
-        //GET RECOMMENDATIONS BASED ON IDTRACK that you searched ;)
-        var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?limit=10&seed_tracks="+ IDTrack, trackParameters)
+     
+    var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?limit=10&seed_tracks="+ IDTrack, trackParameters)
             .then(response => response.json() )
             .then(data => {
                console.log("tracklist: ")
@@ -166,13 +148,6 @@ export function SearchBar(){
               
     } //end searchTrack method
 
-    const showErrorMessage = () => {
-        return(
-     
-            <ErrorNoIDTrack />
-        )
-    }
-       
 
     //to catch the input introduced
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -190,17 +165,16 @@ export function SearchBar(){
 
     return(
     <>
-   
-<form >
-        <input 
-            type="text"
-            id="searchInput"
-            placeholder="Search song"
-            aria-invalid={errors.searchInput ? "true" : "false"}
-            {...register("searchInput", { required: true } )}  
-        />
-        {errors.searchInput && errors.searchInput.type === "required" && 
-    (<span role="alert" className='text-danger'>You need to type a song</span>)}
+    <form >
+            <input 
+                type="text"
+                id="searchInput"
+                placeholder="Search song"
+                aria-invalid={errors.searchInput ? "true" : "false"}
+                {...register("searchInput", { required: true } )}  
+            />
+            {errors.searchInput && errors.searchInput.type === "required" && 
+        (<span role="alert" className='text-danger'>You need to type a song</span>)}
 
         <button
             className="search-button"
@@ -210,9 +184,7 @@ export function SearchBar(){
             Search
         </button>
     </form>
-    {isShown &&   <SongCard dataTrack={dataTrack}/>
-    
-}
+    {isShown &&   <SongCard dataTrack={dataTrack}/>  }
 
     <Outlet />
 
@@ -224,7 +196,6 @@ export function SearchBar(){
       )
     }
 
-
-        </>
+    </>
     )
 }
