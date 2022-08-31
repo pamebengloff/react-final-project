@@ -8,6 +8,9 @@ import {SongList} from "./components/SongList";
 import {ErrorNoIDTrack} from "./components/ErrorNoIDTrack";
 
 import "./searchbar-styles.css"
+
+import {pass} from "../pass.js"
+
 //import { AudioPlayer } from "./components/AudioPlayer";
 
 //padre de SongCard... 
@@ -25,8 +28,8 @@ export function SearchBar(){
 
  
     /*ID's spotify api*/
-    const CLIENT_ID= "ae3ff2b95ca7497d81bf6f10c56325c7";
-    const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
+ //    pass.CLIENT_ID;
+ //   const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
 
     /*API access token*/
     useEffect( ()=>{
@@ -35,7 +38,7 @@ export function SearchBar(){
            headers: {
                "Content-Type": "application/x-www-form-urlencoded"
            },
-           body:"grant_type=client_credentials&client_id=" + CLIENT_ID+ "&client_secret="+CLIENT_SECRET
+           body:"grant_type=client_credentials&client_id=" + pass.CLIENT_ID+ "&client_secret="+pass.CLIENT_SECRET
     }
 
     const CheckError= (result)=>
