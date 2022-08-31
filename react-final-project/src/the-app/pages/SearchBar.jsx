@@ -9,7 +9,7 @@ import {ErrorNoIDTrack} from "./components/ErrorNoIDTrack";
 
 import "./searchbar-styles.css"
 
-import {pass} from "../pass.js"
+import {pass} from "./pass.js"
 
 //import { AudioPlayer } from "./components/AudioPlayer";
 
