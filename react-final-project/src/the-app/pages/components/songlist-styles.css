@@ -113,8 +113,8 @@ text-align: center;
   /*  border: 1px solid blue;*/
 
     background: none;
-    color: rgb(69, 9, 69);   
- 
+  /*  color: rgb(69, 9, 69);*/   
+ color:white;
     font-size: 40px;
     position: relative;
     display: flex;
@@ -124,6 +124,7 @@ text-align: center;
 
 .playPause:hover{
     opacity: .5;
+    color:black;
 }
 
 .addplaylist-button{
@@ -146,28 +147,28 @@ margin-bottom: 10px;
 
 /*HOVER EFFECT*/
 
-.row:hover{
+.song-row:hover{
     background-color: #f1f0f0;
     opacity: 2;
     color:black;
 }
 
-.row:hover .addplaylist-button{
+.song-row:hover .addplaylist-button{
     opacity: 1;
     background-color: rgb(69, 9, 69);
     color:white;
 
 }
 
-.row:hover .song-img{
+.song-row:hover .song-img{
     opacity: 0.8;
 }
 
-.row:hover .button__play{
+.rsong-rowow:hover .button__play{
     opacity: 1;
 }
 
-.row:hover .plus-img{
+.song-row:hover .plus-img{
     opacity: 1;
 }
 
@@ -175,7 +176,7 @@ margin-bottom: 10px;
 
 @media(max-width:574px) { /*SMALL*/
      
-    .row{
+    .song-row{
         
         border: white solid 1px;
     }

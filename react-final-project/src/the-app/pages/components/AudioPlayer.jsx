@@ -89,9 +89,8 @@ return (
 
     <div className="audioplayer container">
         <audio ref={audioPlayer} src={trackList.preview_url} preload="metadata" >  </audio>
-     
-   
-</div>
+        
+    </div>
     </>
     )}
 
