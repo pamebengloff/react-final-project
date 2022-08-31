@@ -1,7 +1,11 @@
 .search-button{
     background-color: rgb(69, 9, 69);
-    border: none;
+    border-radius: 2px;
     color:white;
+   outline:none;
+   margin: 10px;
+   padding: 5px;
+
 }
 .search-button:hover{
     
@@ -9,8 +13,7 @@
     color:white;
 }
 
-
-    .form-control__input {
+.form-control__input {
         width: 100%;
         padding: 12px 24px;
 
@@ -20,8 +23,8 @@
         line-height: 18px;
         
         color: #575756;
-        background-color: transparent;        
-         }
+        background-color: transparent;     
+}
 
     .form-control::placeholder {
             color: color(#575756 a(0.8));
@@ -37,5 +40,5 @@
             border-bottom: 1px solid #575756;
             border-radius: 0;
             background-position: 100% center;
-            }
+    }
     

@@ -1,0 +1,27 @@
+.no-audioplayer{
+  display: flex;
+  width: 100%;  
+  /*border: 1px solid;*/
+  align-items: center; 
+ margin-left: 0;
+  font-size: 15px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.audioplayer{
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+    
+    display: none;
+}
+ /*//esta en songlist-styles.css
+.playPause{
+    background: none;
+    color:white;   
+    border:none;
+    border-radius: 50%;
+    font-size: 40px;
+}*/

@@ -3,7 +3,7 @@
 }
 
 .bg-color{
-    background-color: rgb(183, 163, 203);
+    background-color: rgb(182, 123, 241);
 }
 
 .nav-link{
@@ -34,9 +34,9 @@
 /*@media (max-width:667px){  .navbar{background-color: red;} }*/
     
 @media (max-width:379px) and (min-width:267px){
-    .navbar{
+    /*.navbar{
         background-color:red;
-    }
+    }*/
     
     .brand-icon{
         width:40px;
@@ -55,11 +55,11 @@
  
 
 @media (max-width:266px){
-    .navbar{
+   /* .navbar{
         background-color:yellow;
         width: 100%;
 
-    }
+    }*/
     .brand-icon{
         width:40px;
     }

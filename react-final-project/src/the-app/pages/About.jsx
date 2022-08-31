@@ -4,7 +4,7 @@ import "./home-styles.css"
 export function About(){
     return(
         <>
-       <div class="container-fluid">
+       <div className="container-fluid">
         <h1 className="home-greet">
             About page
         </h1>

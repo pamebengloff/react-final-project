@@ -1,9 +1,12 @@
 body{
-    background-color:rgb(255, 255, 255);
+  /*  background-color:rgb(255, 255, 255);*/
     font-family: 'Inter', sans-serif;
     position: relative;
 
     margin-bottom: 180px;
+
+    background-color: black;
+    color:white;
 }
 
 h1{

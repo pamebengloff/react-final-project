@@ -5,22 +5,13 @@
 .songcard-container{
   /*  border: 1px solid;*/
     display:flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     margin:0;
     padding: 0;
+    border-bottom: solid 1px;
 }
-/*
-.keepsearch-button{
-    background-color: rgb(69, 9, 69);
-    color:white;   
-    opacity:1;
-    display: flex;
-    width: fit-content;
-    padding: 2px 10px 2px 2px;
-    border-radius: 0 10px  10px 0 ;
-}*/
 
 .songimg-container{
   /*  border: 1px solid;*/
@@ -28,27 +19,10 @@
     max-height: 200px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
 }
 
-.songimg-container .keepsearch-button{
-    background-color: rgb(69, 9, 69);
-    color:white;   
-    padding: 2px 10px 2px 2px;
-    border-radius: 0 10px  10px 0 ;
-    border: solid 1px;
-    border-left: none;
-    opacity:1;
-    position: absolute;
-    width: 80px;
-}
-
-.songimg-container .keepsearch-button:hover{
-    background-color: rgb(92, 82, 102);
-    border: solid 1px;
-    color:white;   
-    border-left: none;
-}
 
 .song-result-img{
     width: 100%;
@@ -60,7 +34,14 @@
 .songtext-container{
   /* border: 1px solid blue;*/
     width: 50%;
+    padding-left: 40px;
 }
+
+   .title {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;}
+
 
 @media (max-height:900px){
     .songimg-container{
@@ -71,7 +52,7 @@
     }
     .song-result-img{
         width: 100%;
-        height: 100px;
+      /*  height: 100px;*/
         object-fit: cover;
         object-position:center; 
       

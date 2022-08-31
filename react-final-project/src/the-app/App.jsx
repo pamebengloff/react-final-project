@@ -1,7 +1,8 @@
+
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom"
 
 import {Login} from "../auth/Login"
-import { AppRoutes } from "./routes/AppRoutes"
+import { AppRoutes } from "./pages/routes/AppRoutes"
 
 export default function App(){ //ESTAMOS EN DEV
     return(

@@ -1,0 +1,223 @@
+/*CONTENEDORES*/
+
+.col-md{
+    border: solid 1px red;
+}
+/*
+.row{
+    border: 1px solid red;
+}*/
+
+
+.song-row{
+
+    border-bottom: 1px solid;
+
+    align-items:center;
+}
+
+
+
+.box{ /*contenedor de los list items */
+    height: 6rem;
+
+    display: flex;
+    
+    justify-content: flex-start;
+
+    flex-direction: row;  
+   
+ /*   border-bottom: solid 1px;*/
+   
+ /*   border: 1px solid;*/
+}
+
+.text-container{
+    width: 50%;
+    max-height: 200px;
+    position: relative;
+
+    padding-left: 20px;
+  
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+  cursor: default; 
+}
+
+/*TEXTOS DE LA CARD*/
+
+.card-title{
+    font-size: medium;
+    font-weight: bold;
+    margin:0;
+    width: 250px; 
+
+   /* border:1px solid;*/
+   
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardsub-title{
+    font-size: small;
+    /*border:1px solid red;*/
+    width: 100px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*IMAGENES Y BOTONES*/
+
+.song-img{
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+  
+}
+
+button{ /* para el boton de play con la imagen y el del footer apparently*/
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.audioplayerDIV{
+  /*  border:1px solid red;*/
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+
+    flex-grow:1;
+  
+}
+
+.playPauseContainer{
+/*border:1px solid;*/
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.playPause{
+    border-radius: 50%;
+  /*  border: 1px solid blue;*/
+
+    background: none;
+    color: rgb(69, 9, 69);   
+ 
+    font-size: 40px;
+    position: relative;
+    display: flex;
+  
+  
+}
+
+.playPause:hover{
+    opacity: .5;
+}
+
+.addplaylist-button{
+    background-color: rgb(92, 82, 102);
+    border-radius: 5px;
+   
+    color:white;  
+   
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+margin-bottom: 10px;
+}
+
+.plus-img{
+    width: 15px;
+    transition: .5s ease;
+    opacity: .5;
+}
+
+/*HOVER EFFECT*/
+
+.row:hover{
+    background-color: #f1f0f0;
+    opacity: 2;
+    color:black;
+}
+
+.row:hover .addplaylist-button{
+    opacity: 1;
+    background-color: rgb(69, 9, 69);
+    color:white;
+
+}
+
+.row:hover .song-img{
+    opacity: 0.8;
+}
+
+.row:hover .button__play{
+    opacity: 1;
+}
+
+.row:hover .plus-img{
+    opacity: 1;
+}
+
+/*MEDIA QUERYS*/
+
+@media(max-width:574px) { /*SMALL*/
+     
+    .row{
+        
+        border: white solid 1px;
+    }
+
+    .cardalbum-title{
+        display: none;
+    }
+
+}
+
+
+@media (max-width:457px){ /*movil*/
+    .text-container{
+        position: relative;
+      display: flex;
+      
+    }
+
+    .song-img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .addplaylist-button{
+        height: 40px;
+    }
+    .addplaylist-button span{
+        font-size: small;
+     } 
+   
+     .card-title{      
+        font-size: small; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+ }
+
+ @media (max-width: 286px){
+
+.card-title{
+    width: 100%; 
+}
+    
+ }
