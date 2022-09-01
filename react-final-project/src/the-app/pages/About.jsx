@@ -1,6 +1,5 @@
 import "./about-styles.css"
 
-
 export function About(){
     return(
         <>

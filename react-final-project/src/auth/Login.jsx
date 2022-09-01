@@ -36,7 +36,7 @@ export function Login(props) {
     <>
 
     {/*navbar ish: */}
- 
+
     <nav className="navbar navbar-expand-md">    
       <div className="container-fluid ">
         {/*icono: */}
@@ -44,13 +44,13 @@ export function Login(props) {
         <NavLink to="/login" className="navbar-brand me-auto" >Benglofffyy</NavLink>
  </div>
  </nav>
- 
- <div className="container-fluid mt-5" >
-        <form>
 
-    <div className="form-group col-6">
+<div className="login-container container-fluid d-flex justify-content-center align-items-center">
+     <div className="row login-group text-center d-flex align-items-center" >
+        <form>
+    <div className="form-group ">
             <input 
-           className="form-control"
+           className="form-control "
                 type="text"
                 id="inputEmail"
                 placeholder="Enter email"
@@ -83,6 +83,7 @@ export function Login(props) {
     </form>
 
     </div>
+</div>
 
 
         </>
