@@ -7,8 +7,6 @@ import "./homesearch-styles.css"
 
 export function HomeSearch(){
 
-    /*Navigation*/
-  //  const navigate = useNavigate();
  
     /*States*/
     const [searchInput, setSearchInput ] = useState("");
@@ -142,7 +140,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         console.log(data.searchInput);
     }
 
-    
+    //flag message
 
     return(
     <>
