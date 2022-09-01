@@ -10,12 +10,17 @@ body{background: white;}
     overflow:hidden; 
     width:35vw; 
     height:50vh; 
-  /*  border: 1px solid blue;*/
+   /* border: 1px solid blue;*/
 }
 
 h1{
     font-family: 'Karla', sans-serif;
 }
+.error{
+    color:red;
+    margin-top:5px ;
+}
+
 /*
 .login-button{
     background-color: rgb(69, 9, 69);

@@ -1,8 +1,8 @@
 import {NavLink, useNavigate} from "react-router-dom"
 import { useForm } from "react-hook-form";
 import {useState } from "react"
-import "./login-styles.css"
 import { Navbar } from "../the-app/navbar/Navbar";
+import "./login-styles.css"
 
 export function Login({authenticate}) {
    
@@ -13,7 +13,7 @@ export function Login({authenticate}) {
     const navigate = useNavigate();
   
     const onLogin = () =>{
-       // authenticate();
+        authenticate();
      navigate("/",
      {replace: true}); //me llevara al home, y no regresara al login si ya lo paso
     }
@@ -56,6 +56,9 @@ export function Login({authenticate}) {
 
 <div className="login-container container-fluid d-flex justify-content-center align-items-center">
      <div className="row login-group text-center d-flex align-items-center" >
+       <h1>Welcome to Bengloffyy!</h1>
+        <h2>Please login to access</h2>
+
         <form>
     <div className="form-group ">
             <input 
@@ -83,7 +86,7 @@ export function Login({authenticate}) {
     </div>
     <div className="form-group mt-2">
         <button
-            className="btn btn-success"
+            className="btn btn-primary"
             type="submit"
             onClick={handleSubmit(onSubmit)}>
             Login

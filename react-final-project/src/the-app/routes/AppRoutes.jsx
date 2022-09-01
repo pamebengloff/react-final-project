@@ -8,11 +8,11 @@ import { HomeSearch } from "../pages/HomeSearch.jsx"
 //import { Login } from "../auth/pages/Login.jsx"
 
 //encargado de dar las direcciones para App
-export function AppRoutes() {
+export function AppRoutes(setUser) {
    
     return (
        <> 
-       <Navbar />
+       <Navbar logout={ ()=> setUser(false) }/>
    
     <div className="container">
        <Routes>

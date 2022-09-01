@@ -8,7 +8,7 @@ import "./homesearch-styles.css"
 export function HomeSearch(){
 
     /*Navigation*/
-    const navigate = useNavigate();
+  //  const navigate = useNavigate();
  
     /*States*/
     const [searchInput, setSearchInput ] = useState("");
@@ -136,13 +136,6 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
 } //end searchTrack method
 
 
-const onNavigateHome = () =>{
-    isShown(false)
-    navigate("/")
-  }
-  
-
-
     //to catch the input introduced
     const {register, handleSubmit, formState: {errors}} = useForm();
 
@@ -164,12 +157,12 @@ const onNavigateHome = () =>{
     <div className="container">
       <div className="row home-row">
         <div className="col">
-             <h1 className="home-greet"> Welcome to Benglofffyy!</h1>
+             <h1 className="home-greet"> Discover new music here!</h1>
         </div>
       </div>        
       <div className="row home-row">
         <div className="col">
-        <h4 className="home-description">Type an artist or a song and find song recommendations!   </h4>
+        <h4 className="home-description">Type an artist or a song and find song recommendations   </h4>
         </div>
       </div>
     </div>
