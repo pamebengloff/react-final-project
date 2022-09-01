@@ -36,10 +36,7 @@ export function Login({authenticate}) {
         }
         else{
             onLogin();
-        }
-
-      
-       
+        }       
     }
  
     return (
