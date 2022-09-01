@@ -1,37 +1,35 @@
 body{background: white;}
 
 .login-container{
-    height:70vh; 
+    width:100%; 
+    height:60vh; 
     overflow:hidden; 
-    /*border: 2px solid red*/
+  /*  border: 2px solid red*/
 }
 
-.login-group{
+.login-group-titles{
     overflow:hidden; 
-    width:35vw; 
-    height:50vh; 
-   /* border: 1px solid blue;*/
+    width:50%; 
+    height:60vh; 
+
+   /* border: 1px solid green;*/
 }
 
-h1{
+.login-group-form{
+    overflow:hidden; 
+   margin: 0;
+    height:40vh; 
+
+  /*  border: 1px solid blue;*/
+}
+
+h1, h2{
     font-family: 'Karla', sans-serif;
 }
 .error{
     color:red;
     margin-top:5px ;
 }
-
-/*
-.login-button{
-    background-color: rgb(69, 9, 69);
-    border: none;
-    color:white;
-}
-
-.login-button:hover{
-    background-color: rgb(69, 9, 69);
-    color:white;
-}*/
 
 .brand-container{
     padding:8px 12px;

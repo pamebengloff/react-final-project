@@ -4,7 +4,7 @@ import { AudioPlayer } from "./AudioPlayer";
 
 import "./songcard-styles.css"
 
-export function SongCard({dataTrack, onNavigateHome}){
+export function SongCard({dataTrack}){
  
 
 //    console.log("hola desde song card")   
@@ -18,6 +18,7 @@ export function SongCard({dataTrack, onNavigateHome}){
     </div>
     
     <div className="songtext-container col-sm">
+      <p className="title">Based on:</p>
         <h1 className="title"> {dataTrack.name} </h1>
         <h4 className="title"> {dataTrack.album.name} </h4>
         <h4 className="title"> {dataTrack.artists[0].name} </h4>

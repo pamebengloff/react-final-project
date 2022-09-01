@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import {useNavigate} from "react-router-dom"
 import {useState, useEffect} from "react"
 import { SongCard } from "./components/SongCard";
@@ -17,9 +17,10 @@ export function HomeSearch(){
     const [trackList, setTrackList] = useState([]); //to set in an array every track we list
     const [isShown, setIsShown] = useState(false);
 
-  //  const [isLoading, setIsLoading] = useState(true);
 
-   // const [id, setId] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [showError, setShowError] = useState(false);
+    const [showIsEmpty, setShowIsEmpty] = useState(false);
 
    const CLIENT_ID= "ae3ff2b95ca7497d81bf6f10c56325c7";
    const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
@@ -87,11 +88,15 @@ export function HomeSearch(){
         //    setIsLoading(false)
         );
         });
-        if( IDTrack === undefined  ) return;
+        if( IDTrack === undefined  ){
+            setErrorMessage("We couldn't find an artist or song, try with other title");
+            setIsShown(false);
+            return;
+        }else{
+         
         
         console.log("el IDTrack es: "+ IDTrack);
-      
-        
+              
 
 //GET DATA OF THE SEARCHED TRACK
 var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
@@ -99,15 +104,12 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         .then( data => {
             setDataTrack(data?.tracks?.items[0]);
             console.log(data.tracks.items[0])
+            setShowError(false);
             setIsShown(true); //only show element on click, show most up to date state
   
         }
-    ); 
- 
- 
-
-
-
+    );  
+}//end of GET ID TRACK 
 
 
 //GET RECOMMENDATIONS BASED ON IDTRACK that you searched ;)
@@ -116,22 +118,12 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         .then(data => {
            console.log("tracklist: ")
             console.log( data.tracks)
-            setTrackList(data.tracks)
-            
-           
+            setTrackList(data.tracks) 
+            setShowIsEmpty("We couldn't find recommendations for this"); 
         }
-       
-
+        
     ) 
-
-  /*  const tracklistEmpty = () =>{
-    if( trackList.length === 0){
-        console.log("tracklist vacio")
-       return(
-           <EmptyTracklist />
-        )
-    }}*/
-
+   
    
 } //end searchTrack method
 
@@ -178,7 +170,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
                 {...register("searchInput", { required: true } )}  
             />
             {errors.searchInput && errors.searchInput.type === "required" && 
-            (<span role="alert" className='text-danger'>You need to type a song</span>)}
+            (<span role="alert" className='text-danger'>You need to type a song and/or artist</span>)}
     </div>
     <div className="form-group">
             <button
@@ -190,12 +182,21 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
     </div>
     </form>
 
-   {
-    isShown && <SongCard dataTrack={dataTrack} />    
+    {  //if showError is false, show the SongCard  
+    !showError && isShown ?  ( isShown && <SongCard dataTrack={dataTrack} />)
+    :  //else, the search wasn't found, show the error 
+    (errorMessage && <div className="error"> {errorMessage}  </div> )     
     } 
-  
-    {    
-     trackList.map( (trackList)=>{
+    
+    { //if there isn't a song card there's no songlist, then don't show songlist
+        
+         !isShown && showIsEmpty ?  trackList.length ===0 :  //and if song list doesnt show, dont send the trackList data
+  /*  }
+    {*/
+        trackList.length ===0 ? (showIsEmpty && <div className="error"> {showIsEmpty} </div>)
+        :   //if trackList does have items, then send data and show results :)
+          
+         trackList.map( (trackList)=>{
         return(        
          <SongList  trackList={trackList} key={trackList.id.toString()} />               
         )

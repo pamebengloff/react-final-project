@@ -55,10 +55,11 @@ export function Login({authenticate}) {
  </nav>
 
 <div className="login-container container-fluid d-flex justify-content-center align-items-center">
-     <div className="row login-group text-center d-flex align-items-center" >
-       <h1>Welcome to Bengloffyy!</h1>
-        <h2>Please login to access</h2>
-
+     <div className="row login-group-titles text-center d-flex align-items-center" >
+       <h2>Welcome to Bengloffyy!</h2>
+        <h3>Please login to access</h3>
+      
+        <div className="row login-group-form text-center d-flex align-items-center" >
         <form>
     <div className="form-group ">
             <input 
@@ -94,7 +95,7 @@ export function Login({authenticate}) {
         {errorMessage && <div className="error"> {errorMessage} </div>}
     </div>
     </form>
-
+    </div>
     </div>
 </div>
 

@@ -18,8 +18,7 @@ export function Navbar({inputEmail
     logout();
     
    navigate("/login",
-   {replace: true}); //me llevara al ly
-   // o a la pagina anterior no importa,y el replace evita que el user pueda regresar al historial anterior porque se esta reemplazando
+   {replace: true}); //me llevara al login y no dejara regresar al home, el replace evita que el user pueda regresar al historial anterior porque se esta reemplazando
   }
   
   const navButton = useRef(null);
