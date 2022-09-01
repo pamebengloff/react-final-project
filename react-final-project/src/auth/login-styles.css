@@ -16,7 +16,7 @@ body{background: white;}
 h1{
     font-family: 'Karla', sans-serif;
 }
-
+/*
 .login-button{
     background-color: rgb(69, 9, 69);
     border: none;
@@ -24,9 +24,9 @@ h1{
 }
 
 .login-button:hover{
-    background-color: rgb(92, 82, 102);
+    background-color: rgb(69, 9, 69);
     color:white;
-}
+}*/
 
 .brand-container{
     padding:8px 12px;

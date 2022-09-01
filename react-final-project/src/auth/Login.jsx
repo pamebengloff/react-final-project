@@ -4,14 +4,16 @@ import {useState } from "react"
 import "./login-styles.css"
 import { Navbar } from "../the-app/navbar/Navbar";
 
-export function Login(props) {
+export function Login({authenticate}) {
    
     const [inputEmail, setInputEmail] = useState("");
     const [inputPass, setInputPass] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const navigate = useNavigate();
   
     const onLogin = () =>{
+       // authenticate();
      navigate("/",
      {replace: true}); //me llevara al home, y no regresara al login si ya lo paso
     }
@@ -21,17 +23,24 @@ export function Login(props) {
      const {register, handleSubmit, formState: {errors}} = useForm();
 
      const onSubmit = (data) =>{
- 
-        
+  
         document.getElementById("inputEmail").value = ""; // setSearchInput("")
         document.getElementById('inputPass').value = "";
-       
-       
-        onLogin();
-    //    if(data.inputPass.trim().length <=0) return; 
-     //   if(data.inputEmail.trim().length <=0) return; 
+   
+        
 
-     }
+        if(data.inputPass.trim().length <=0 || data.inputEmail.trim().length <=0)
+        {
+        setErrorMessage("Please enter your email and password");
+        return
+        }
+        else{
+            onLogin();
+        }
+
+      
+       
+    }
  
     return (
     <>
@@ -75,11 +84,12 @@ export function Login(props) {
     </div>
     <div className="form-group mt-2">
         <button
-            className="btn login-button"
+            className="btn btn-success"
             type="submit"
             onClick={handleSubmit(onSubmit)}>
             Login
         </button>
+        {errorMessage && <div className="error"> {errorMessage} </div>}
     </div>
     </form>
 

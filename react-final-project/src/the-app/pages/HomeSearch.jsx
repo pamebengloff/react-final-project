@@ -9,9 +9,7 @@ export function HomeSearch(){
 
     /*Navigation*/
     const navigate = useNavigate();
-
  
-;
     /*States*/
     const [searchInput, setSearchInput ] = useState("");
     const [accessToken, setAccessToken] = useState("");
@@ -19,9 +17,9 @@ export function HomeSearch(){
     const [trackList, setTrackList] = useState([]); //to set in an array every track we list
     const [isShown, setIsShown] = useState(false);
 
-    const [isLoading, setIsLoading] = useState(true);
+  //  const [isLoading, setIsLoading] = useState(true);
 
-    const [id, setId] = useState("");
+   // const [id, setId] = useState("");
 
    const CLIENT_ID= "ae3ff2b95ca7497d81bf6f10c56325c7";
    const CLIENT_SECRET= "4910e0a550d5422495e6cc4ff6fa1af0";
@@ -64,7 +62,7 @@ export function HomeSearch(){
         },[accessToken]
     )
  
-        /*SEARCH FUNCTION*/
+/*SEARCH FUNCTION*/
     async function searchTrack(input){ //async bc we'll make a lot of search petitions to the api
         console.log("Buscaste: "+ input);
         console.log("su length es de:"+ input.length);
@@ -80,8 +78,7 @@ export function HomeSearch(){
 
 
 
-//GET ID TRACK - primero checas que el input no este feo
-
+    //GET ID TRACK 
     var IDTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
         .then(response => response.json() )
         .then(data => {            
@@ -169,8 +166,7 @@ const onNavigateHome = () =>{
         <div className="col">
              <h1 className="home-greet"> Welcome to Benglofffyy!</h1>
         </div>
-      </div>
-        
+      </div>        
       <div className="row home-row">
         <div className="col">
         <h4 className="home-description">Type an artist or a song and find song recommendations!   </h4>
@@ -178,13 +174,10 @@ const onNavigateHome = () =>{
       </div>
     </div>
 
-    
-
     <form>
-
     <div className="form-group col-6">
             <input 
-           className="form-control"
+                className="form-control"
                 type="text"
                 id="searchInput"
                 placeholder="Search song"
@@ -192,34 +185,29 @@ const onNavigateHome = () =>{
                 {...register("searchInput", { required: true } )}  
             />
             {errors.searchInput && errors.searchInput.type === "required" && 
-        (<span role="alert" className='text-danger'>You need to type a song</span>)}
+            (<span role="alert" className='text-danger'>You need to type a song</span>)}
     </div>
     <div className="form-group">
-        <button
-            className="search-button btn col"
-            type="submit"
-            onClick={handleSubmit(onSubmit)}>
-            Search
-        </button>
+            <button
+                className="search-button btn col"
+                type="submit"
+                onClick={handleSubmit(onSubmit)}>
+                Search
+            </button>
     </div>
     </form>
-
 
    {
     isShown && <SongCard dataTrack={dataTrack} />    
     } 
   
-{
-     
-       
+    {    
      trackList.map( (trackList)=>{
-        return(
-        
+        return(        
          <SongList  trackList={trackList} key={trackList.id.toString()} />               
         )
        } 
       )
- 
     }
 
     </>
