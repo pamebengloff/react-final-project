@@ -23,10 +23,10 @@ export function Navbar({inputEmail} ){
     navButton.current.classList.add("collapsed");
     linksContainerRef.current.classList.remove("show");
   }
-
+//flag message
   return(
 <>
-
+        
 <nav className="navbar sticky-top navbar-expand-sm navbar-expand-xs bg-color">    
 <div className="container-fluid">
       <img className="brand-icon" src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
