@@ -1,4 +1,4 @@
-import "./home-styles.css"
+import "./about-styles.css"
 
 
 export function About(){
@@ -8,10 +8,10 @@ export function About(){
 <div className="container">
   <div className="row about-row">
     <div className="col-sm">
-    <h1 className="home-greet">
+    <h1 className="about-greet">
             About
         </h1>
-        <p className="home-description">
+        <p className="about-description">
         This is a project made with React, Bootstrap and the Spotify API <br />                
     </p>
     </div>

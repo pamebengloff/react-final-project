@@ -1,7 +1,7 @@
 import {NavLink, Link, useNavigate} from "react-router-dom"
 import {useRef} from "react"
-import { Home } from "../pages/Home";
-import { SearchBar } from "../pages/SearchBar";
+//import { SearchBar } from "../pages/HomeSearch";
+import { SearchBar } from "../pages/HomeSearch";
 import "./navbar.css"
 
 

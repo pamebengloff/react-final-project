@@ -1,17 +1,17 @@
 import { useForm } from "react-hook-form";
-import {useNavigate, Outlet} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import {useState, useEffect} from "react"
 import { SongCard } from "./components/SongCard";
 import {SongList} from "./components/SongList";
-//import {pass} from "./pass.js"
-import "./searchbar-styles.css"
-import EmptyTracklist from "./components/EmptyTracklist";
+import "./homesearch-styles.css"
 
 export function SearchBar(){
 
     /*Navigation*/
     const navigate = useNavigate();
 
+ 
+;
     /*States*/
     const [searchInput, setSearchInput ] = useState("");
     const [accessToken, setAccessToken] = useState("");
@@ -102,6 +102,8 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         .then( data => {
             setDataTrack(data?.tracks?.items[0]);
             console.log(data.tracks.items[0])
+            setIsShown(true); //only show element on click, show most up to date state
+  
         }
     ); 
  
@@ -133,9 +135,16 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         )
     }}*/
 
-    setIsShown(true); //only show element on click, show most up to date state
    
 } //end searchTrack method
+
+
+const onNavigateHome = () =>{
+    isShown(false)
+    navigate("/")
+  }
+  
+
 
     //to catch the input introduced
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -151,10 +160,28 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         console.log(data.searchInput);
     }
 
+    
+
     return(
     <>
-    <form>
+    <div className="container">
+      <div className="row home-row">
+        <div className="col">
+             <h1 className="home-greet"> Welcome to Benglofffyy!</h1>
+        </div>
+      </div>
         
+      <div className="row home-row">
+        <div className="col">
+        <h4 className="home-description">Type an artist or a song and find song recommendations!   </h4>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <form>
+
     <div className="form-group col-6">
             <input 
            className="form-control"
@@ -169,26 +196,25 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
     </div>
     <div className="form-group">
         <button
-            className="search-button btn col-1"
+            className="search-button btn col"
             type="submit"
             onClick={handleSubmit(onSubmit)}>
             Search
         </button>
     </div>
     </form>
-    
 
-   { isShown &&  <SongCard dataTrack={dataTrack} />  } 
 
-    <Outlet />
+   {
+    isShown && <SongCard dataTrack={dataTrack} />    
+    } 
+  
 {
      
        
      trackList.map( (trackList)=>{
         return(
-
-       
-
+        
          <SongList  trackList={trackList} key={trackList.id.toString()} />               
         )
        } 

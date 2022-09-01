@@ -1,8 +1,13 @@
 import {NavLink, useNavigate} from "react-router-dom"
+import { useForm } from "react-hook-form";
+import {useState } from "react"
 import "./login-styles.css"
 
 export function Login(props) {
    
+    const [inputEmail, setInputEmail] = useState("");
+    const [inputPass, setInputPass] = useState("");
+
     const navigate = useNavigate();
   
     const onLogin = () =>{
@@ -10,6 +15,23 @@ export function Login(props) {
      {replace: true}); //me llevara al home, y no regresara al login si ya lo paso
     }
    
+
+     //to catch the input introduced
+     const {register, handleSubmit, formState: {errors}} = useForm();
+
+     const onSubmit = (data) =>{
+ 
+        
+        document.getElementById("inputEmail").value = ""; // setSearchInput("")
+        document.getElementById('inputPass').value = "";
+       
+       
+        onLogin();
+    //    if(data.inputPass.trim().length <=0) return; 
+     //   if(data.inputEmail.trim().length <=0) return; 
+
+     }
+ 
     return (
     <>
 
@@ -23,17 +45,46 @@ export function Login(props) {
  </div>
  </nav>
  
-   
-        <div className='container mt-5'>
-            <h1>Login</h1>
-            <hr />
-            <button 
-                className="btn login-button"
-                onClick={onLogin}> 
-                Login
-            </button>
-        </div>
-        
+ <div className="container-fluid mt-5" >
+        <form>
+
+    <div className="form-group col-6">
+            <input 
+           className="form-control"
+                type="text"
+                id="inputEmail"
+                placeholder="Enter email"
+                aria-invalid={errors.inputEmail ? "true" : "false"}
+                {...register("inputEmail", { required: true } )}  
+            />
+            {errors.inputEmail && errors.inputEmail.type === "required" && 
+        (<span role="alert" className='text-danger'>An email is required</span>)}
+    
+    <input 
+           className="form-control mt-2"
+                type="password"
+                id="inputPass"
+                placeholder="Enter password"
+                aria-invalid={errors.inputPass ? "true" : "false"}
+                {...register("inputPass", { required: true } )}  
+            />
+            {errors.inputPass && errors.inputPass.type === "required" && 
+        (<span role="alert" className='text-danger'>A password is required</span>)}
+    
+    </div>
+    <div className="form-group mt-2">
+        <button
+            className="btn login-button"
+            type="submit"
+            onClick={handleSubmit(onSubmit)}>
+            Login
+        </button>
+    </div>
+    </form>
+
+    </div>
+
+
         </>
     );
 }
