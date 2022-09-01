@@ -2,6 +2,7 @@ import {NavLink, useNavigate} from "react-router-dom"
 import { useForm } from "react-hook-form";
 import {useState } from "react"
 import "./login-styles.css"
+import { Navbar } from "../the-app/navbar/Navbar";
 
 export function Login(props) {
    
@@ -85,7 +86,7 @@ export function Login(props) {
     </div>
 </div>
 
-
+{  inputEmail && <Navbar  inputEmail={inputEmail} /> }
         </>
     );
 }

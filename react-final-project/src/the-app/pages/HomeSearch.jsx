@@ -5,7 +5,7 @@ import { SongCard } from "./components/SongCard";
 import {SongList} from "./components/SongList";
 import "./homesearch-styles.css"
 
-export function SearchBar(){
+export function HomeSearch(){
 
     /*Navigation*/
     const navigate = useNavigate();

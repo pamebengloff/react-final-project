@@ -1,11 +1,10 @@
 import {NavLink, Link, useNavigate} from "react-router-dom"
 import {useRef} from "react"
-//import { SearchBar } from "../pages/HomeSearch";
-import { SearchBar } from "../pages/HomeSearch";
+import { HomeSearch } from "../pages/HomeSearch";
 import "./navbar.css"
 
 
-export function Navbar(){
+export function Navbar({inputEmail} ){
     
   //custom hook de router
   const navigate = useNavigate();
@@ -61,6 +60,7 @@ export function Navbar(){
 
           <li className="nav-item">   
               <Link className="nav-link dropdown-toggle " to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+              <p>{inputEmail} </p>
               <img className="img-user d-inline-block " src={userImg} alt="user"
               />  
               </Link>

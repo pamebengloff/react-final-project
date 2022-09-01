@@ -2,11 +2,8 @@ import { Routes, Route, Navigate  } from "react-router-dom"
 /*fijo */
 import { Navbar } from "../navbar/Navbar.jsx"
 /*paginas */
-//import {Home} from "../Home"
 import {About} from "../pages/About"
-import { SearchBar } from "../pages/HomeSearch.jsx"
-/*con params?*/
-//import { SongCard } from "../pages/components/SongCard.jsx"
+import { HomeSearch } from "../pages/HomeSearch.jsx"
 /*login*/ 
 //import { Login } from "../auth/pages/Login.jsx"
 
@@ -19,7 +16,7 @@ export function AppRoutes() {
    
     <div className="container">
        <Routes>
-            <Route path="/" element={<SearchBar/>} >Home</Route>
+            <Route path="/" element={<HomeSearch/>} >Home</Route>
          
             <Route path="about" element={<About/>} >About</Route>
 
