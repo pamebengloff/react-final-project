@@ -4,20 +4,14 @@ import { HomeSearch } from "../pages/HomeSearch";
 import "./navbar.css"
 
 
-export function Navbar({inputEmail
-,logout
-//,user
-} ){
-    
-  //custom hook de router
-  const navigate = useNavigate();
+export function Navbar({logout} ){
   
+  const navigate = useNavigate(); 
   const userImg = "https://64.media.tumblr.com/8bd5c2b2c0a375b5452ab5e797693502/b34844853d0bbbfa-c9/s75x75_c1/8625529a7ae86faaf4ab8fe3a0a4ecf2d6e5883d.png"
 
   const onLogout = () =>{
-    logout();
-    
-   navigate("/login",
+    logout(false); 
+    navigate("/login",
    {replace: true}); //me llevara al login y no dejara regresar al home, el replace evita que el user pueda regresar al historial anterior porque se esta reemplazando
   }
   
@@ -71,7 +65,7 @@ export function Navbar({inputEmail
               </Link>
              <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                  <p className="m-3">{inputEmail} Pamela </p>
+                  <p className="m-3"> Pamela </p>
                   <Link className="dropdown-item d-flex  ms-auto" to="/login"
                       onClick={onLogout}>
                     Logout

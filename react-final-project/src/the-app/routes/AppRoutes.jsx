@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate  } from "react-router-dom"
 /*fijo */
 import { Navbar } from "../navbar/Navbar.jsx"
+import Footer from "../pages/components/Footer";
 /*paginas */
 import {About} from "../pages/About"
 import { HomeSearch } from "../pages/HomeSearch.jsx"
@@ -10,10 +11,11 @@ import { HomeSearch } from "../pages/HomeSearch.jsx"
 //encargado de dar las direcciones para App
 export function AppRoutes(setUser) {
    
+
     return (
        <> 
-       <Navbar logout={ ()=> setUser(false) }/>
    
+       <Navbar logout={ ()=> setUser(false) }/>
     <div className="container">
        <Routes>
             <Route path="/" element={<HomeSearch/>} >Home</Route>
@@ -24,7 +26,7 @@ export function AppRoutes(setUser) {
             {  /*404 page to Home cualquier direccion te llevara al home */}
         </Routes>
       </div>
-   
+      <Footer />
        </>
     )
 }
