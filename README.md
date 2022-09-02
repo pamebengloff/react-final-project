@@ -1,5 +1,5 @@
 # Bengloffyy: react-final-project
-A final project from the Apprentice made in React
+A Final Project from the Apprentices 2 - Javascript/React Program
 
 - Software requirements
 
