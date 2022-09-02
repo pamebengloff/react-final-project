@@ -25,11 +25,7 @@ export function AudioPlayer({
     
 
     //references
-    // para PlayPauseBtn
      const audioPlayer = useRef(); //reference for our audio component/ to link the playPause btn to the audio
-  //const progressBar = useRef(); //ref to the progressBar 
-  //  const animationRef = useRef(); //ref for animation (for the progressBar)
-
     const buttonPressed = useRef();
 
     useEffect(
