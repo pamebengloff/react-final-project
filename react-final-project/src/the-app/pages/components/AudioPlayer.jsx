@@ -36,7 +36,7 @@ export function AudioPlayer({
         () =>{
   
             if(trackList.preview_url == null ){
-                console.log(isNull)
+           //     console.log(isNull)
                     setIsNull(true);
                //     setCurrentTime(0);
             } 

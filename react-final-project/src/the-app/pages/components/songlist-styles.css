@@ -64,6 +64,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+   
 }
 
 
@@ -162,10 +163,14 @@ text-align: center;
     }
 
     .titles-col, .card-title{
+
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        text-align: center;
+
+        white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     }
 
 }
@@ -191,11 +196,13 @@ text-align: center;
      } 
    
      .card-title{      
+        
         font-size: small; 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
  }
 
  @media (max-width: 286px){

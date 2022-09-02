@@ -1,8 +1,7 @@
-import { set, useForm } from "react-hook-form";
-import {useNavigate} from "react-router-dom"
+import { useForm } from "react-hook-form";
 import {useState, useEffect} from "react"
 import { SongCard } from "./components/SongCard";
-import {SongList} from "./components/SongList";
+import { SongList } from "./components/SongList";
 import "./homesearch-styles.css"
 
 export function HomeSearch(){
@@ -63,8 +62,8 @@ export function HomeSearch(){
  
 /*SEARCH FUNCTION*/
     async function searchTrack(input){ //async bc we'll make a lot of search petitions to the api
-        console.log("Buscaste: "+ input);
-        console.log("su length es de:"+ input.length);
+       // console.log("Buscaste: "+ input);
+      //  console.log("su length es de:"+ input.length);
 
     //get request to get track you input
     var trackParameters = {
@@ -87,13 +86,13 @@ export function HomeSearch(){
         );
         });
         if( IDTrack === undefined  ){
-            setErrorMessage("We couldn't find an artist or song, try with other title");
+            setErrorMessage("We couldn't find an artist or song, please try with other title");
             setIsShown(false);
             return;
         }else{
          
         
-        console.log("el IDTrack es: "+ IDTrack);
+      //  console.log("el IDTrack es: "+ IDTrack);
               
 
 //GET DATA OF THE SEARCHED TRACK
@@ -101,7 +100,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         .then(response => response.json() )                        
         .then( data => {
             setDataTrack(data?.tracks?.items[0]);
-            console.log(data.tracks.items[0])
+          //  console.log(data.tracks.items[0])
             setShowError(false);
             setIsShown(true); //only show element on click, show most up to date state
   
@@ -114,8 +113,8 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
  var returnedTrackList = await fetch("https://api.spotify.com/v1/recommendations?limit=10&seed_tracks="+ IDTrack, trackParameters)
         .then(response => response.json() )
         .then(data => {
-           console.log("tracklist: ")
-            console.log( data.tracks)
+          // console.log("tracklist: ")
+           // console.log( data.tracks)
             setTrackList(data.tracks) 
             setShowIsEmpty("We couldn't find recommendations for this"); 
         }
@@ -137,7 +136,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
 
         searchTrack(data.searchInput);
 
-        console.log(data.searchInput);
+      //  console.log(data.searchInput);
     }
 
     //flag message

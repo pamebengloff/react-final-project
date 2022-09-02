@@ -11,7 +11,7 @@ logout
 //,user
 } ){
     
-  const {inputEmail} = useContext(AuthContext); 
+  const {inputEmail, user, setUser} = useContext(AuthContext); 
   
   //custom hook de router
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ logout
 
   const onLogout = () =>{
     logout();
-    
+   
    navigate("/login",
    {replace: true}); //me llevara al login y no dejara regresar al home, el replace evita que el user pueda regresar al historial anterior porque se esta reemplazando
   }
