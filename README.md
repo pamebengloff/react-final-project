@@ -19,15 +19,15 @@ The aim is to run the application in the user’s system, following the next ins
 
 1) Install Visual Studio Code version 1.69 
 
-You can visit their page here.
+You can visit their page https://code.visualstudio.com/download
 
 2) Install Git
 
-You can visit their page here.
+You can visit their page https://git-scm.com/downloads
 
 3) Install Node.js LTS Version: 16.17.0
 
-You can visit their page here.
+You can visit their page https://nodejs.org/en/download/
 Once it’s installed you need to restart your computer so that it finishes its installation completely.
 
 To check if is installed correctly open the Command Prompt in Windows and run the commands:
