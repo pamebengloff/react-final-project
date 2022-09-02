@@ -5,7 +5,6 @@ import { SongCard } from "./components/SongCard";
 import {SongList} from "./components/SongList";
 import "./homesearch-styles.css"
 
-
 export function HomeSearch(){
 
  
@@ -174,7 +173,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
     </div>
     <div className="form-group">
             <button
-                className="btn btn-primary mt-2 mb-2 col"
+                className="search-button btn col"
                 type="submit"
                 onClick={handleSubmit(onSubmit)}>
                 Search
@@ -204,7 +203,6 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
       )
     }
 
-    
     </>
     )
 }

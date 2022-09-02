@@ -13,9 +13,9 @@ export function Login({authenticate}) {
     const navigate = useNavigate();
   
     const onLogin = () =>{
-    authenticate(true);
+        authenticate();
      navigate("/",
-     {replace: true}); //will send me to Home, it won't get back to Login page 
+     {replace: true}); //me llevara al home, y no regresara al login si ya lo paso
     }
    
 
@@ -36,10 +36,6 @@ export function Login({authenticate}) {
         }
         else{
             onLogin();
-
-
-
-
         }       
     }
  //flag comment
@@ -103,7 +99,7 @@ export function Login({authenticate}) {
     </div>
 </div>
 
-
+{  inputEmail && <Navbar  inputEmail={inputEmail} /> }
         </>
     );
 }

@@ -4,31 +4,15 @@ import {useState} from "react"
 import {Login} from "../auth/Login"
 import { AppRoutes } from "./routes/AppRoutes"
 import { Navbar } from "./navbar/Navbar";
+import { HomeSearch } from "./pages/HomeSearch";
 import { useEffect } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 
-export function App(){
+export function App(){ //ESTAMOS EN DEV
 
-    const [logged, setLogged] = useLocalStorage("logged", false);
     const [user, setUser] = useState(null);
-
-    function changeToLoggedUser(status){
-        setUser(status)
-        setLogged(true)
-    }
-
-    function changeToLoggedOutUser(status){
-        setUser(status)
-        setLogged(false)
-    }
-
-    useEffect( () =>{
-
-        !logged ? setUser(true) : setUser(false);
-
-    }, [logged])
-
+//flag comment
+//flag comment
     
     return(
 
@@ -37,16 +21,14 @@ export function App(){
         <Routes>
             {!user && (    //si el user no esta loggeado mandalo a login
           
-            <Route path="/login" element={<Login authenticate={ (status) => changeToLoggedUser(status) } />} >Login</Route>
+            <Route path="/login" element={<Login authenticate={ ()=> setUser(true) } />} >Login</Route>
             )}
 
-            {user  && (  //si el user si esta loggeado mandalo al home
+            {user  && (  //si el user si esta loggeado mandalo al login
 
                 <>
           
-           {/* <Route path="/navbar" element={<Navbar logout={ ()=> setUser(false) } />} ></Route>*/}
-            <Route path="/navbar" element={<Navbar logout={ (status) => changeToLoggedOutUser(status) } />} >Navbar</Route>
-            
+          <Route path="/navbar" element={<Navbar logout={ ()=> setUser(false) } />} ></Route>
             <Route path="/*" element={<AppRoutes/>} ></Route>
             
             </>
