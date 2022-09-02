@@ -7,18 +7,24 @@ import {BsPencil} from "react-icons/bs"
 function Footer(props) {
     return (
 //flag comment
-//flag comment
-    <footer className="fixed-bottom" >
+//flag comment 
+    <footer className="fixed-bottom" >           
+    <div className="container footer-container">
+        <div className="row row-footer">
+         
+                <p> <FiHeart/> Made by: Pamela Sechslingloff </p>
            
-    <div className="container">
-        <div className="row">
-            <div className="col-sm col-footer">
-                <FiHeart/> Made by: Pamela Sechslingloff <br />
-                <BsMailbox/> <a href="mailto:pamebengloff@gmail.com">pamebengloff@gmail.com</a> 
-            </div>
-            <div className="col-sm col-footer">
-            <BsPencil/> Upskilling: Front-End Development
-            </div>
+            <div className="row row-footer">
+                
+                <a href="mailto:pamebengloff@gmail.com"><BsMailbox/> pamebengloff@gmail.com</a> 
+              
+            </div> 
+            <div className="row row-footer">
+               
+                 <p><BsPencil/> 3Pillar Global Apprentice Program. Upskilling: Front-End Development</p>
+                <p>Copyright © 2022 Benglofffyy</p>
+               
+            </div>   
         </div>
     </div>
         </footer>

@@ -5,6 +5,7 @@ import {Login} from "../auth/Login"
 import { AppRoutes } from "./routes/AppRoutes"
 import { Navbar } from "./navbar/Navbar";
 import { HomeSearch } from "./pages/HomeSearch";
+import Footer from "./pages/components/Footer.jsx"
 import { useEffect } from "react";
 
 
@@ -36,6 +37,8 @@ export function App(){ //ESTAMOS EN DEV
 
             <Route path="*" element={<Navigate  to={user ? "/" : "/login"} />} ></Route>
         </Routes>
+
+        <Footer/>
     </Router>
     
     )

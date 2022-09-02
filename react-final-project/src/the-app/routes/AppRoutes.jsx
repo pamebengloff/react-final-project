@@ -3,7 +3,7 @@ import { Routes, Route, Navigate  } from "react-router-dom"
 import { Navbar } from "../navbar/Navbar.jsx"
 /*paginas */
 import {About} from "../pages/About"
-import Footer from "../pages/components/Footer.jsx"
+
 import { HomeSearch } from "../pages/HomeSearch.jsx"
 /*login*/ 
 //import { Login } from "../auth/pages/Login.jsx"
@@ -26,7 +26,7 @@ export function AppRoutes(setUser) {
         </Routes>
       </div>
    
-      <Footer/>
+      
        </>
     )
 }
