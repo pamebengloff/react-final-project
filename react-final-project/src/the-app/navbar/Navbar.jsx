@@ -2,13 +2,17 @@ import {NavLink, Link, useNavigate} from "react-router-dom"
 import {useRef} from "react"
 import { HomeSearch } from "../pages/HomeSearch";
 import "./navbar.css"
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 
 
-export function Navbar({inputEmail
-,logout
+export function Navbar({
+logout
 //,user
 } ){
     
+  const {inputEmail} = useContext(AuthContext); 
+  
   //custom hook de router
   const navigate = useNavigate();
   
@@ -71,7 +75,7 @@ export function Navbar({inputEmail
               </Link>
              <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                  <p className="m-3">{inputEmail} Pamela </p>
+                  <p className="m-3"> {inputEmail} </p>
                   <Link className="dropdown-item d-flex  ms-auto" to="/login"
                       onClick={onLogout}>
                     Logout

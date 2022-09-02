@@ -3,31 +3,38 @@ import { useForm } from "react-hook-form";
 import {useState } from "react"
 import { Navbar } from "../the-app/navbar/Navbar";
 import "./login-styles.css"
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import { HomeSearch } from "../the-app/pages/HomeSearch";
 
 export function Login({authenticate}) {
    
-    const [inputEmail, setInputEmail] = useState("");
-    const [inputPass, setInputPass] = useState("");
+    //para el AuthContext
+
+    const {inputEmail,setInputEmail, setInputPass, inputPass} = useContext(AuthContext); 
+
+ //  const [inputEmail, setInputEmail] = useState("");
+  //  const [inputPass, setInputPass] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
     const navigate = useNavigate();
   
     const onLogin = () =>{
         authenticate();
+
      navigate("/",
      {replace: true}); //me llevara al home, y no regresara al login si ya lo paso
     }
    
-
      //to catch the input introduced
      const {register, handleSubmit, formState: {errors}} = useForm();
 
      const onSubmit = (data) =>{
   
+       
         document.getElementById("inputEmail").value = ""; // setSearchInput("")
         document.getElementById('inputPass').value = "";
    
-        
 
         if(data.inputPass.trim().length <=0 || data.inputEmail.trim().length <=0)
         {
@@ -35,7 +42,8 @@ export function Login({authenticate}) {
         return
         }
         else{
-            onLogin();
+           onLogin();
+    
         }       
     }
  //flag comment
@@ -69,6 +77,9 @@ export function Login({authenticate}) {
                 placeholder="Enter email"
                 aria-invalid={errors.inputEmail ? "true" : "false"}
                 {...register("inputEmail", { required: true } )}  
+                onChange={(event) => {
+                    setInputEmail(event.target.value);
+                  }}
             />
             {errors.inputEmail && errors.inputEmail.type === "required" && 
         (<span role="alert" className='text-danger'>An email is required</span>)}
@@ -99,7 +110,6 @@ export function Login({authenticate}) {
     </div>
 </div>
 
-{  inputEmail && <Navbar  inputEmail={inputEmail} /> }
         </>
     );
 }
