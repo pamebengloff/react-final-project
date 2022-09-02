@@ -3,10 +3,10 @@ A Final Project from the Apprentices 2 - Javascript/React Program
 
 - Software requirements
 
-Windows 8, 10 or 11
-Visual Studio Code version 1.69
-Node.js LTS Version: 16.17.0
-Git
+Windows 8, 10 or 11, 
+Visual Studio Code version 1.69, 
+Node.js LTS Version: 16.17.0, 
+Git, 
 Chrome
 
 - Hardware requirements
@@ -33,6 +33,7 @@ Once it’s installed you need to restart your computer so that it finishes its 
 To check if is installed correctly open the Command Prompt in Windows and run the commands:
 
 $ node -v
+
 $ npm -v
 
 If it shows you the version number, you’re ready to go to the next steps.
@@ -43,7 +44,9 @@ If it shows you the version number, you’re ready to go to the next steps.
 Open the Command Prompt in Windows and go to the folder you wish to clone the project, create a new folder where the project will be.
 
 $ cd desktop 
+
 $ mkdir project-folder
+
 $ cd project-folder    
 
 Clone the repository from GitHub: https://github.com/pamebengloff/react-final-project 
