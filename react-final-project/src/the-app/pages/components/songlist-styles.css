@@ -1,8 +1,8 @@
 /*CONTENEDORES*/
-
-.col-md{
+/*
+.col-sm{
     border: solid 1px red;
-}
+}*/
 /*
 .row{
     border: 1px solid red;
@@ -12,7 +12,6 @@
 .song-row{
 
     border-bottom: 1px solid;
-
     align-items:center;
 }
 
@@ -20,16 +19,13 @@
 
 .box{ /*contenedor de los list items */
     height: 6rem;
-
-    display: flex;
-    
+    display: flex;    
     justify-content: flex-start;
-
     flex-direction: row;  
    
  /*   border-bottom: solid 1px;*/
    
- /*   border: 1px solid;*/
+  /*  border: 1px solid;*/
 }
 
 .text-container{
@@ -63,8 +59,8 @@
 
 .cardsub-title{
     font-size: small;
-    /*border:1px solid red;*/
-    width: 100px; 
+  /*  border:1px solid red;*/
+    width: 122px; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -163,6 +159,13 @@ text-align: center;
 
     .cardalbum-title{
         display: none;
+    }
+
+    .titles-col, .card-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
 }

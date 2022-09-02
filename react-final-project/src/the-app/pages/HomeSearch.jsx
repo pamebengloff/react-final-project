@@ -173,7 +173,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
     </div>
     <div className="form-group">
             <button
-                className="search-button btn col"
+                className="btn btn-primary mt-2 mb-2 col"
                 type="submit"
                 onClick={handleSubmit(onSubmit)}>
                 Search

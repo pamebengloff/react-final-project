@@ -28,22 +28,26 @@ return (
     <>
 
 <div className="container  ">
-<div className="row song-row">
+<div className="row song-row ">
     <div className="col-sm img-col">
        <img  className="song-img  mx-auto" alt="song" variant="bottom"  src={trackList.album.images[0].url} />
     </div>
 
-    <div className="col-sm">
+    <div className="col-sm titles-col">
         <p className="card-title "   data-bs-toggle="tooltip"  data-bs-title={trackList.name}>  {trackList.name} </p>
-        <p className="cardalbum-title cardsub-title">  {trackList.album.name} </p>
-        <p className="cardsub-title">  {trackList.artists[0].name} </p> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}           
+        
     </div>
+    
+    <div className="col-sm titles-col">
+          <p className="cardalbum-title cardsub-title">  {trackList.album.name} </p>
+          <p className="cardsub-title">  {trackList.artists[0].name} </p> {/*por mientras que arreglamos el link de abajo para que solo acepte artistas existentes en el url */}           
+        </div>
+
     <div className="col-sm audioplayerDIV ">
         <AudioPlayer trackList={trackList}  currentSong={trackList.preview_url}  />        
     </div>
-<div className="col-sm"></div>
     
-
+    
   </div>
 </div>
 

@@ -65,7 +65,7 @@ export function Login({authenticate}) {
 <div className="login-container container-fluid d-flex justify-content-center align-items-center">
      <div className="row login-group-titles text-center d-flex align-items-center" >
        <h2>Welcome to Bengloffyy!</h2>
-        <h3>Please login to access and start your search</h3>
+        <h3>Please login to access and start discovering</h3>
       
         <div className="row login-group-form text-center d-flex align-items-center" >
         <form>
