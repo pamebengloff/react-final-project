@@ -6,7 +6,7 @@ import {BsPencil} from "react-icons/bs"
 
 function Footer(props) {
     return (
-
+//flag comment
     <footer className="fixed-bottom" >
            
     <div className="container">
