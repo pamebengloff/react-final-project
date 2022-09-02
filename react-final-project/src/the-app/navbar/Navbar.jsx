@@ -4,7 +4,7 @@ import { HomeSearch } from "../pages/HomeSearch";
 import "./navbar.css"
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
-
+import {BiUser} from "react-icons/bi"
 
 export function Navbar({
 logout
@@ -69,9 +69,7 @@ logout
            
           <li className="nav-item">   
               <Link className="nav-link dropdown-toggle " to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-        
-              <img className="img-user d-inline-block " src={userImg} alt="user"
-              />  
+                  <BiUser/>   
               </Link>
              <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink">
                 <li>
