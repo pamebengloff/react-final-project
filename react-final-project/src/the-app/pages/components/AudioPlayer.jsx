@@ -42,7 +42,6 @@ export function AudioPlayer({
             //  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);  //una vez que este cargado y exista el audio "file"
     },[] );
 
-//flag comment
 
     const  togglePlayPause = ()=>{        
         const prevValue = isPlaying;
