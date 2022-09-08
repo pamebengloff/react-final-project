@@ -1,64 +1,65 @@
-import "./audioplayer-styles.css"
-import "./songlist-styles.css"
 import { useState, useRef, useEffect } from "react"; //useRef to grab the audioplayer and setup the reference
 import {BsPlay} from "react-icons/bs"
 import {BsPause} from "react-icons/bs"
-
+import "./audioplayer-styles.css"
+import "./songlist-styles.css"
 
 export function AudioPlayer({
     dataTrack, 
     trackList, 
-   currentSong
 }) {
  
     //state
-  //uno de los cambios para PlayPauseBtn
-    const[isPlaying, setIsPlaying] = useState(false);
-  
-    const[duration, setDuration] = useState(0);
-    const [currentTime, setCurrentTime] = useState(0);
-
+    const [isPlaying, setIsPlaying] = useState(false);
     const [isNull, setIsNull] = useState(false);
-
-    const [currentPlaying, setCurrentPlaying] = useState([]);
-
-    //flag comment
+     
+    const [songlist, setSonglist] = useState([]);
 
     //references
-     const audioPlayer = useRef(); //reference for our audio component/ to link the playPause btn to the audio
+    const audioPlayer = useRef(); //reference for our audio component/ to use the play and pause methods for html DOM element
     const buttonPressed = useRef();
 
     useEffect(
         () =>{
-  
-            if(trackList.preview_url == null ){
+            if(trackList.preview_url == null ){ //if there's no preview, isNull =true, show message
            //     console.log(isNull)
                     setIsNull(true);
-               //     setCurrentTime(0);
-            } 
-                setCurrentPlaying(trackList.preview_url)
-            
-
-            //  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);  //una vez que este cargado y exista el audio "file"
-    },[] );
-
+          
+            }                                  
+        },[] 
+    );
 
     const  togglePlayPause = ()=>{        
-        const prevValue = isPlaying;
-
-        setIsPlaying(!prevValue);
+        const prevValue = isPlaying; //we take the initial state of isPlaying
+    
+        setIsPlaying(!prevValue); //and if it's playing, it'll take the opposite state, so it will play 
         if(!prevValue){
             audioPlayer.current.play();
-
-            setCurrentPlaying(audioPlayer.current)
-
+           
+          //console.log(isPlaying); //false
         }else{
             audioPlayer.current.pause();
-        //   cancelAnimationFrame(animationRef.current);
-           
-        }  
+           // console.log(isPlaying);   //true  
+        
+        } 
+        
     }
-  
+/*
+    const addSongToArray = () =>{ 
+
+        setSonglist(songlist => [ ...songlist, trackList.name] );
+    }
+
+    function imprimeSonglist(){
+    
+        console.log("el songlist es:");
+
+        songlist.map( (song) => {return (
+            console.log(song))
+        }
+      );
+    }
+*/
 
 return (
 
@@ -85,6 +86,9 @@ return (
         <audio ref={audioPlayer} src={trackList.preview_url} preload="metadata" >  </audio>
         
     </div>
+
+    {/*  <button className="btn btn-primary" onClick={imprimeSonglist} >clic</button>
+   */}
     </>
     )}
 

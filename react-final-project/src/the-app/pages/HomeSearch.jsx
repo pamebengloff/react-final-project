@@ -119,7 +119,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
             setShowIsEmpty("We couldn't find recommendations for this"); 
         }
         
-    ) 
+    )
    
    
 } //end searchTrack method
@@ -138,9 +138,6 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
 
       //  console.log(data.searchInput);
     }
-
-    //flag message
-    //flag message
 
     return(
     <>
@@ -188,18 +185,19 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
     
     { //if there isn't a song card there's no songlist, then don't show songlist
         
-         !isShown && showIsEmpty ?  trackList.length ===0 :  //and if song list doesnt show, dont send the trackList data
-  /*  }
-    {*/
-        trackList.length ===0 ? (showIsEmpty && <div className="error"> {showIsEmpty} </div>)
-        :   //if trackList does have items, then send data and show results :)
-          
-         trackList.map( (trackList)=>{
-        return(        
-         <SongList  trackList={trackList} key={trackList.id.toString()} />               
+        !isShown && showIsEmpty ?  
+        
+        trackList.length ===0 :  //and if song list doesnt show, dont send the trackList data
+            trackList.length ===0 ? (showIsEmpty && <div className="error"> {showIsEmpty} </div>)
+       
+        :   //else, trackList does have items, then send data and show results :)
+        
+        trackList.map( (trackList)=>{ //each item in trackList will go to a "list item" in SongList
+            return(        
+                <SongList  trackList={trackList} key={trackList.id.toString()} />               
+          )
+         } 
         )
-       } 
-      )
     }
 
     </>
