@@ -1,4 +1,4 @@
-# Bengloffyy: react-final-project 🎧
+# Bengloffyy 🎧
 A Final Project from the Apprentices 2 - Javascript/React Program
 
 ## Software requirements 🔮
