@@ -3,7 +3,7 @@ import "./about-styles.css"
 export function About(){
     return(
         <>
-
+{/* flag */}
 <div className="container">
   <div className="row about-row">
     <div className="col-sm">
