@@ -19,7 +19,7 @@ export function SongList({trackList, currentSongs}) {
   
 return (
     <>
-    <div className="container  ">
+    <div className="container-fluid">
       <div className="row song-row ">
           <div className="col-sm img-col">
               <img  className="song-img  mx-auto" alt="song" variant="bottom"  src={trackList.album.images[0].url} />

@@ -1,22 +1,21 @@
 import {NavLink, Link, useNavigate} from "react-router-dom"
-import {useRef} from "react"
+import {useRef, useContext } from "react";
 import { HomeSearch } from "../pages/HomeSearch";
 import "./navbar.css"
-import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import {BiUser} from "react-icons/bi"
+import logo from "../images/favicon.png"
 
-export function Navbar({
-logout
-//,user
-} ){
+export function Navbar({logout}){
     
   const {inputEmail, user, setUser} = useContext(AuthContext); 
   
   //custom hook de router
   const navigate = useNavigate();
   
-  const userImg = "https://64.media.tumblr.com/8bd5c2b2c0a375b5452ab5e797693502/b34844853d0bbbfa-c9/s75x75_c1/8625529a7ae86faaf4ab8fe3a0a4ecf2d6e5883d.png"
+  //  const userImg = "https://64.media.tumblr.com/8bd5c2b2c0a375b5452ab5e797693502/b34844853d0bbbfa-c9/s75x75_c1/8625529a7ae86faaf4ab8fe3a0a4ecf2d6e5883d.png"
+
+
 
   const onLogout = () =>{
     logout();
@@ -39,8 +38,8 @@ logout
         
 <nav className="navbar sticky-top navbar-expand-sm navbar-expand-xs bg-color">    
 <div className="container-fluid">
-      <img className="brand-icon" src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
-      <NavLink to="/" className="navbar-brand" >Benglofffyy</NavLink>
+      <img className="brand-icon" src={logo} alt="logo" /> 
+      <NavLink to="/" className="navbar-brand" >Bengloffyy</NavLink>
 
       <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
        ref={navButton}

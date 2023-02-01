@@ -1,17 +1,26 @@
-
 .bg-color{
-    background-color: rgb(182, 123, 241);
+     background-color:white;
+}
+
+.navbar{
+    padding: 0;
 }
 
 .nav-link{
-    color:white;
+    color:black;
     margin-right:15px;
 }
 
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color:#700400;
+}
+
+
 .navbar-brand{
-    color:black;
+    color:#700400;
     font-size: 30px;
     font-family: 'Karla', sans-serif;
+    padding-left: 10px;
 }
 
 
@@ -23,7 +32,7 @@
 
 .navbar-brand:hover, .navbar-brand:focus {
   background-color: transparent;
-  color: black;
+  color:#700400;
 }
 
 
@@ -37,6 +46,7 @@
     
     .brand-icon{
         width:40px;
+        
     }
     .img-user{
         width:25px;

@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import {useState, useEffect} from "react"
 import { SongCard } from "./components/SongCard";
 import { SongList } from "./components/SongList";
+import searchArrow from "../images/search-arrow.svg"
 import "./homesearch-styles.css"
 
 export function HomeSearch(){
@@ -13,7 +14,6 @@ export function HomeSearch(){
     const [dataTrack, setDataTrack] = useState([]);//to save the data we get
     const [trackList, setTrackList] = useState([]); //to set in an array every track we list
     const [isShown, setIsShown] = useState(false);
-
 
     const [errorMessage, setErrorMessage] = useState("");
     const [showError, setShowError] = useState(false);
@@ -73,8 +73,6 @@ export function HomeSearch(){
             "Authorization": "Bearer " + accessToken 
         }                  
     }
-
-
 
     //GET ID TRACK 
     var IDTrack = await fetch("https://api.spotify.com/v1/search?q="+ input + "&type=track", trackParameters)
@@ -141,7 +139,7 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
 
     return(
     <>
-    <div className="container">
+<div className="container-fluid cont">
       <div className="row home-row">
         <div className="col">
              <h1 className="home-greet"> Discover new music here!</h1>
@@ -152,36 +150,54 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         <h4 className="home-description">Type an artist or a song and find song recommendations   </h4>
         </div>
       </div>
-    </div>
+    <div className="row">
+         <div className="col">
+            <form className="form-container">
+                 <input 
+                    className="form-control my-form"
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search a song"
+                    aria-invalid={errors.searchInput ? "true" : "false"}
+                    {...register("searchInput", { required: true } )}  
+                 />
+                
+                {/* que el boton aparezca cuando haya texto */}
+                
+                 <button
+                    type="submit"
+                    onClick={handleSubmit(onSubmit)}
+                 >
+                    <img src={searchArrow}></img>
+                 </button>
 
-    <form>
-    <div className="form-group col-6">
-            <input 
-                className="form-control"
-                type="text"
-                id="searchInput"
-                placeholder="Search song"
-                aria-invalid={errors.searchInput ? "true" : "false"}
-                {...register("searchInput", { required: true } )}  
-            />
+             </form>
+           
+        </div>
+        <div className="row">
+            <div className="col">
             {errors.searchInput && errors.searchInput.type === "required" && 
-            (<span role="alert" className='text-danger'>You need to type a song and/or artist</span>)}
-    </div>
-    <div className="form-group">
-            <button
-                className="btn btn-primary mt-2 mb-2 col"
-                type="submit"
-                onClick={handleSubmit(onSubmit)}>
-                Search
-            </button>
-    </div>
-    </form>
+                (<span role="alert" className='text-danger'>You need to type a song and/or artist</span>)
+            }
 
+            
+            </div>
+        </div>
+
+   </div>
+   
+
+   <div className="row">
+            <div className="col col-nosongs">
     {  //if showError is false, show the SongCard  
     !showError && isShown ?  ( isShown && <SongCard dataTrack={dataTrack} />)
     :  //else, the search wasn't found, show the error 
-    (errorMessage && <div className="error"> {errorMessage}  </div> )     
+    (errorMessage && <div className="text-danger"> {errorMessage}  </div> )     
     } 
+      </div>
+    </div>
+
+    </div> 
     
     { //if there isn't a song card there's no songlist, then don't show songlist
         
@@ -200,6 +216,9 @@ var returnedDataTrack = await fetch("https://api.spotify.com/v1/search?q="+ inpu
         )
     }
 
+
+
+ 
     </>
     )
 }

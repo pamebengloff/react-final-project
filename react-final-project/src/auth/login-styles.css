@@ -1,4 +1,6 @@
-body{background: white;}
+body{background: white;
+margin:10px;
+}
 
 .login-container{
     width:100%; 
@@ -36,9 +38,20 @@ h1, h2{
     
 }
 .navbar-brand{
-    color:black;
+    color:#700400;
     
 }
 .navbar-brand:hover{
-    color:black;
+    color:#700400;
+}
+
+.btn, .btn:hover{
+    background-color: #BD0700;
+    border:none;
+    color:white;
+    font-size:17px;;
+}
+
+.btn:hover{
+    background-color: #700400;
 }

@@ -1,6 +1,7 @@
 
 footer{
-    background-color: rgb(69, 9, 69);
+    /* background-color: rgb(69, 9, 69); */
+    background-color: #BD0700;
     color:white;
     display: flex;
     align-items: center;

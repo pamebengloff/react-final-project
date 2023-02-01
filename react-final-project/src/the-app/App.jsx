@@ -52,7 +52,7 @@ export function App(){
            {/* <Route path="*" element={<Navigate  to={user ? "/" : "/login"} />} ></Route>   */}
         </Routes>
 
-        <Footer/>
+        {/* <Footer/> */}
     </Router>
     </AuthProvider>
     )

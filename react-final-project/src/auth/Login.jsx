@@ -6,6 +6,7 @@ import "./login-styles.css"
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import { HomeSearch } from "../the-app/pages/HomeSearch";
+import logo from "../the-app/images/favicon.png"
 
 export function Login({authenticate}) {
    
@@ -59,8 +60,8 @@ export function Login({authenticate}) {
     <nav className="navbar navbar-expand-md">    
       <div className="container-fluid ">
         {/*icono: */}
-    <img src="https://64.media.tumblr.com/5c2892b711b0b1c9bbf0b12509f1e009/691937bb40e9d75b-67/s75x75_c1/9dee6e95bfd9c4c6e7e26252283739f7931aab95.png" alt="logo" />
-        <NavLink to="/login" className="navbar-brand me-auto" >Benglofffyy</NavLink>
+        <img className="brand-icon" src={logo} alt="logo" /> 
+        <NavLink to="/login" className="navbar-brand me-auto" >Bengloffyy</NavLink>
  </div>
  </nav>
 
@@ -100,7 +101,7 @@ export function Login({authenticate}) {
     </div>
     <div className="form-group mt-2">
         <button
-            className="btn btn-primary"
+            className="btn"
             type="submit"
             onClick={handleSubmit(onSubmit)}>
             Login
