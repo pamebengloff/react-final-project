@@ -12,10 +12,6 @@ export function Navbar({logout}){
   
   //custom hook de router
   const navigate = useNavigate();
-  
-  //  const userImg = "https://64.media.tumblr.com/8bd5c2b2c0a375b5452ab5e797693502/b34844853d0bbbfa-c9/s75x75_c1/8625529a7ae86faaf4ab8fe3a0a4ecf2d6e5883d.png"
-
-
 
   const onLogout = () =>{
     logout();
@@ -40,6 +36,7 @@ export function Navbar({logout}){
 <div className="container-fluid">
       <img className="brand-icon" src={logo} alt="logo" /> 
       <NavLink to="/" className="navbar-brand" >Bengloffyy</NavLink>
+
 
       <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
        ref={navButton}

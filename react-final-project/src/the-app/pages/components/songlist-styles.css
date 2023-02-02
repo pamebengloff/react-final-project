@@ -1,65 +1,44 @@
-/*CONTENEDORES*/
-/*
-.col-sm{
-    border: solid 1px red;
-}*/
-/*
-.row{
-    border: 1px solid red;
-}*/
-
 
 .song-row{
+    /* border: 5px solid red; */
+    background-color:#700400;
+    color:white;
 
-    border-bottom: 1px solid;
-    align-items:center;
-}
-
-
-
-.box{ /*contenedor de los list items */
-    height: 6rem;
-    display: flex;    
-    justify-content: flex-start;
-    flex-direction: row;  
-   
- /*   border-bottom: solid 1px;*/
-   
-  /*  border: 1px solid;*/
-}
-
-.text-container{
-    width: 50%;
-    max-height: 200px;
-    position: relative;
-
-    padding-left: 20px;
-  
-    word-break: break-word;
     display: flex;
-    flex-direction: column;
-    border: 1px solid;
-  cursor: default; 
+    align-items:center;
+    /* justify-content: space-around; */
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+    border-radius: 30px;
 }
+
+.coll{
+    display: flex;
+    flex-direction: row;
+    border: solid 5px green;
+}
+
 
 /*TEXTOS DE LA CARD*/
 
 .card-title{
-    font-size: medium;
+    /* font-size: medium; */
     font-weight: bold;
     margin:0;
     width: 250px; 
 
-   /* border:1px solid;*/
-   
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    
+    display: flex;
+    justify-self: flex-start;
+
+    border: solid 5px red;
 }
 
 .cardsub-title{
-    font-size: small;
-  /*  border:1px solid red;*/
+
     width: 122px; 
     white-space: nowrap;
     overflow: hidden;
@@ -92,61 +71,53 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
     display: flex;
     align-items:center;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 
-    flex-grow:1;
+    /* flex-grow:1; */
   
 }
 
-.playPauseContainer{
-/*border:1px solid;*/
+.playPauseContainerList{
+    border: 1px solid blue;
 display: flex;
 justify-content: center;
 text-align: center;
+}
+
+.playPauseSongCard{
+    border-radius: 50%;
+    /*  border: 1px solid blue;*/
+      background: none;
+      color:#700400;
+      font-size: 60px;
+      
 }
 
 .playPause{
     border-radius: 50%;
   /*  border: 1px solid blue;*/
     background: none;
-  /*  color: rgb(69, 9, 69);*/   
- color:black;
-    font-size: 40px;
+    color: white;
+    font-size: 60px;
     position: relative;
     display: flex;
 }
 
 
 /*HOVER EFFECT*/
+.song-row:hover{
+    background-color: #BD0700;
+    /* opacity: 2; */
+    color:white;
+}
+
 .song-row:hover .playPause{
    /* background-color: #f1f0f0;*/
-    opacity: 2;
-    color:black;
-}
-
-.song-row:hover{
-    background-color: #f1f0f0;
-    opacity: 2;
-    color:black;
-}
-
-.song-row:hover .addplaylist-button{
-    opacity: 1;
-    background-color: rgb(69, 9, 69);
-    color:white;
-
+    color: white;
 }
 
 .song-row:hover .song-img{
     opacity: 0.8;
-}
-
-.rsong-rowow:hover .button__play{
-    opacity: 1;
-}
-
-.song-row:hover .plus-img{
-    opacity: 1;
 }
 
 /*MEDIA QUERYS*/

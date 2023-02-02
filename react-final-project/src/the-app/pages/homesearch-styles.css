@@ -5,13 +5,32 @@ body{
     color:black;
     height: 90vh;
     margin:0;
+    padding: 0;
 }
+
+.container{
+    display: flex;   
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* height: 60vh;  */
+}   
 
 .cont{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 60vh;
+    align-items: center;
+     justify-content: center;  
+    
+}
+
+.roww{
+    margin-bottom: 50px;
+}
+
+.home-row{
+    margin-top: 150px;
 }
 
  .col{
@@ -28,6 +47,7 @@ body{
     top:100%;
 }
 
+
 h1{ 
     word-break: break-word;
 }
@@ -36,6 +56,7 @@ h1{
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 
@@ -45,37 +66,37 @@ h1{
     justify-content: center;
     width: 100%;
     margin-top: 10px;
-    position: relative;
+    /* position: relative; */
     
 }
 
 .form-container button{
-    position: relative;
-    right: 40px; 
+      position: relative;  
+      right: 40px;  
+    
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
     /* border: solid red 1px; */
     
 }
 
-
-.my-form{
-    max-width: 607px;
+.song-form{
+    min-width: 200px; 
+    width: 600px;
     height: 55px;
-    border-color: #BD0700; 
+    border: 1px solid #BD0700; 
 
     border-radius: 30px;
     background: url(../images/search-icon.svg) no-repeat   1px ;
     background-position: 3%;
-    padding-left:53px;
-}
-
-.form-control{
-    border-color: #BD0700; 
-    color: #700015 ;
+    padding-left:70px;
+    color:black;
     font-weight: bold;
     font-size: 20px;   
 }
 
-.form-control::placeholder { 
+.song-form::placeholder { 
     color: #700015 ;
     opacity: 0.8;
     font-weight: bold;
@@ -84,14 +105,17 @@ h1{
 } 
 
 
-.my-form:hover,
-.my-form:focus {      
+.song-form:hover,
+.song-form:focus {      
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
     /* color:#700015;
     opacity: 1; */
+    outline-color: none !important;
+    outline: none !important;
+    transition: none !important;
 }
 
 .text-danger{

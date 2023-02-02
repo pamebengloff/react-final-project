@@ -74,7 +74,7 @@ export function Login({authenticate}) {
         <form>
     <div className="form-group ">
             <input 
-           className="form-control "
+           className="form-control login-form"
                 type="text"
                 id="inputEmail"
                 placeholder="Enter email"
@@ -88,12 +88,15 @@ export function Login({authenticate}) {
         (<span role="alert" className='text-danger'>An email is required</span>)}
     
     <input 
-           className="form-control mt-2"
+           className="form-control login-form"
                 type="password"
                 id="inputPass"
                 placeholder="Enter password"
                 aria-invalid={errors.inputPass ? "true" : "false"}
-                {...register("inputPass", { required: true } )}  
+                {...register("inputPass", { required: true } )} 
+                onChange={(event) => {
+                    setInputPass(event.target.value);
+                  }} 
             />
             {errors.inputPass && errors.inputPass.type === "required" && 
         (<span role="alert" className='text-danger'>A password is required</span>)}

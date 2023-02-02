@@ -5,8 +5,8 @@ import {BsPause} from "react-icons/bs"
 import "./audioplayer-styles.css"
 import "./songlist-styles.css"
 
-export function AudioPlayer({
-    trackList, 
+export function AudioPlayerSongCard({
+    dataTrack, 
 }) {
  
     //state
@@ -21,7 +21,7 @@ export function AudioPlayer({
 
     useEffect(
         () =>{
-            if(trackList.preview_url == null ){ //if there's no preview, isNull =true, show message
+            if(dataTrack.preview_url == null ){ //if there's no preview, isNull =true, show message
            //     console.log(isNull)
                     setIsNull(true);
             } 
@@ -50,23 +50,23 @@ return (
 
     { isNull ? (
     <> 
-        <p className="playPauseContainerList">Preview <br/>not available</p>  
+        <p className="playPauseContainer">Preview <br/>not available</p>  
     </>
     ): (
       
     <> 
-    <div className="playPauseContainerList">  {/* //para PlayPauseBtn*/}
+    <div className="playPauseContainer">  {/* //para PlayPauseBtn*/}
             <button 
                 onClick={togglePlayPause}
-                className="playPause" 
+                className="playPauseSongCard" 
                 ref={buttonPressed}
                 >    
                 {isPlaying ? <BsPause/> : <BsPlayFill/> }   
             </button>
     </div>
 
-    <div className="">
-        <audio ref={audioPlayer} src={trackList.preview_url} preload="metadata" >  </audio>    
+    <div className="audioplayer container">
+        <audio ref={audioPlayer} src={dataTrack.preview_url} preload="metadata" >  </audio>    
     </div>
 
     </>

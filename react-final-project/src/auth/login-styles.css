@@ -55,3 +55,53 @@ h1, h2{
 .btn:hover{
     background-color: #700400;
 }
+.form-control{
+    display: flex;
+    margin-bottom:15px;
+}
+
+.form-control:focus{
+box-shadow:  #BD0700 !important;
+border-color:  #700400;
+
+ /* border-color: #FF0000; */
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(189, 7, 0, 0.6);
+
+}
+
+.login-form{ 
+    
+    height: 50px;
+    border: 1px solid #BD0700; 
+    color:black;
+    font-weight: bold;
+    font-size: 20px;   
+}
+
+.login-form::placeholder { 
+    color: #700015 ;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+} 
+
+/* 
+.login-form:hover,
+.login-form:focus {      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items:center ;
+    border-radius: 30px;
+    /* color:#700015;
+    opacity: 1; */
+ 
+    */
+
+.text-danger{
+    color:red !important;
+    opacity: 1;
+    font-size: 17px;
+    font-weight: bold;
+}
