@@ -1,5 +1,5 @@
-# LoveSong - A React final project 🎧
-A Final Project from the Apprentices 2 - Javascript/React Program
+# LoveSong - A React final project 🎧💘
+A final Project from the Apprentices 2 - Javascript/React Program
 
 ## Software requirements 🔮
 
