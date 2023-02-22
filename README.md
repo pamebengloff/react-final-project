@@ -1,4 +1,4 @@
-# Bengloffyy 🎧
+# LoveSong - A React final project 🎧
 A Final Project from the Apprentices 2 - Javascript/React Program
 
 ## Software requirements 🔮
