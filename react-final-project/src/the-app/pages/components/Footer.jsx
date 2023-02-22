@@ -23,7 +23,7 @@ function Footer(props) {
             <div className="row row-footer">
                
                  <p><BsPencil/> 3Pillar Global Apprentice Program. Upskilling: Front-End Development</p>
-                <p>Copyright © 2022 Benglofffyy</p>
+                <p>Copyright © 2022 LoveSong</p>
                
             </div>   
         </div>

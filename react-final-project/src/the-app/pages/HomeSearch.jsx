@@ -151,15 +151,15 @@ async function searchTrack(input){ //async bc we'll make a lot of search petitio
 
     <div className="row roww">
         <div className="col">
-            <form className="form-container">
+            <form className="form-container">               
                  <input 
-                    className="song-form"
+                    className="song-form "
                     type="text"
                     id="searchInput"
                     placeholder="Search a song"
                     aria-invalid={errors.searchInput ? "true" : "false"}
                     {...register("searchInput", { required: true } )}  
-                 />               
+                 />                            
                 {/* que el boton aparezca cuando haya texto */}
                     <button
                     type="submit"
@@ -167,6 +167,7 @@ async function searchTrack(input){ //async bc we'll make a lot of search petitio
                  >
                     <img src={searchArrow}></img>
                  </button>
+                
             </form>  
         </div>
         <div className="row">
@@ -190,9 +191,11 @@ async function searchTrack(input){ //async bc we'll make a lot of search petitio
         } 
         </div>
     </div>
+
+
  </div>   
     
-
+<div className="container-fluid cont">
     { //if there isn't a song card there's no songlist, then don't show songlist
         
         !isShown && showIsEmpty ?  
@@ -209,8 +212,8 @@ async function searchTrack(input){ //async bc we'll make a lot of search petitio
          } 
         )
     }
-
-{/* </div>  */}
+</div>
+  {/* </div>   */}
  
     </>
     )

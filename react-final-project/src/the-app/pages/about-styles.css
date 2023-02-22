@@ -1,7 +1,5 @@
 
-
 h1{
-    font-family: 'Karla', sans-serif;
     word-break: break-word;
 }
 
@@ -24,4 +22,5 @@ h1{
 .about-row{
     padding: 1px 0 20px 0;
     border:none;
+    width: 100%;
 }

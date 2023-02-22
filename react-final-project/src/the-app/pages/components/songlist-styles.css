@@ -1,56 +1,57 @@
 
 .song-row{
-    /* border: 5px solid red; */
-    background-color:#700400;
+    /* border: 5px solid red;  */
+    
+    background-color: #BD0700;
     color:white;
 
     display: flex;
+    flex-direction: row;    
     align-items:center;
-    /* justify-content: space-around; */
-    margin: 5px 0 5px 0;
-    padding: 5px 0 5px 0;
+    /* justify-content: space-around;  */
+     margin: 5px 0 5px 0; 
+     height: 100px;
+    /* padding: 15px 0 15px 0; */
     border-radius: 30px;
 }
 
-.coll{
-    display: flex;
-    flex-direction: row;
-    border: solid 5px green;
+.song-row .row{
+    width: 60%;
+    
+    /* border:3px green solid;   */
 }
 
+
+.titles-col{
+     /* border: solid 1px blue;   */
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+}
 
 /*TEXTOS DE LA CARD*/
 
 .card-title{
-    /* font-size: medium; */
     font-weight: bold;
-    margin:0;
-    width: 250px; 
+    width: 300px; 
 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+     /* border: solid 5px blue;  */
+}
+.subtitle{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     
-    display: flex;
-    justify-self: flex-start;
-
-    border: solid 5px red;
 }
-
-.cardsub-title{
-
-    width: 122px; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-   
-}
-
 
 /*IMAGENES Y BOTONES*/
 
 .song-img{
-    transition: .5s ease;
+    /* transition: .5s ease; */
     backface-visibility: hidden;
     width: 5rem;
     height: 5rem;
@@ -78,8 +79,16 @@ button{ /* para el boton de play con la imagen y el del footer apparently*/
 }
 
 .playPauseContainerList{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.playPauseContainer{
+     /* border: 1px solid blue;  */
+display: flex;
+align-items: center;
 justify-content: center;
 text-align: center;
 }
@@ -107,6 +116,7 @@ text-align: center;
 /*HOVER EFFECT*/
 .song-row:hover{
     background-color: #BD0700;
+    background-color:#700400;
     /* opacity: 2; */
     color:white;
 }
@@ -114,10 +124,6 @@ text-align: center;
 .song-row:hover .playPause{
    /* background-color: #f1f0f0;*/
     color: white;
-}
-
-.song-row:hover .song-img{
-    opacity: 0.8;
 }
 
 /*MEDIA QUERYS*/

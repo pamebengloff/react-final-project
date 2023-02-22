@@ -7,7 +7,7 @@ return(<>
 <div className="home-row">
     <div className="row">
         <div className="col">
-             <h1 className="home-greet"> Discover new music here!</h1>
+             <h1 className="home-greet"> Discover songs you love and save them as you explore!</h1>
         </div>
     </div>        
     <div className="row ">

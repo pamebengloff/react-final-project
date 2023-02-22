@@ -61,14 +61,14 @@ export function Login({authenticate}) {
       <div className="container-fluid ">
         {/*icono: */}
         <img className="brand-icon" src={logo} alt="logo" /> 
-        <NavLink to="/login" className="navbar-brand me-auto" >Bengloffyy</NavLink>
+        <NavLink to="/login" className="navbar-brand me-auto" >LoveSong</NavLink>
  </div>
  </nav>
 
 <div className="login-container container-fluid d-flex justify-content-center align-items-center">
      <div className="row login-group-titles text-center d-flex align-items-center" >
-       <h2>Welcome to Bengloffyy!</h2>
-        <h3>Please login to access and start discovering</h3>
+       <h2>Welcome to LoveSong!</h2>
+        <h3>Please register or log in to access</h3>
       
         <div className="row login-group-form text-center d-flex align-items-center" >
         <form>
@@ -94,9 +94,7 @@ export function Login({authenticate}) {
                 placeholder="Enter password"
                 aria-invalid={errors.inputPass ? "true" : "false"}
                 {...register("inputPass", { required: true } )} 
-                onChange={(event) => {
-                    setInputPass(event.target.value);
-                  }} 
+               
             />
             {errors.inputPass && errors.inputPass.type === "required" && 
         (<span role="alert" className='text-danger'>A password is required</span>)}

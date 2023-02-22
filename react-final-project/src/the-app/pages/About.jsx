@@ -7,17 +7,12 @@ export function About(){
 <div className="container">
   <div className="row about-row">
     <div className="col-sm">
-    <h1 
-    className="about-greet"
-    >
-        
+        <h1 className="about-greet" >
             About
         </h1>
-        <p 
-        // className="about-description"
-        >
+        <p>
         This is a project made with React, Bootstrap and the Spotify API. <br />                
-    </p>
+        </p>
     </div>
   
   </div>

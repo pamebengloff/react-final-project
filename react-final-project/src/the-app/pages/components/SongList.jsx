@@ -8,28 +8,28 @@ export function SongList({trackList, currentSongs}) {
   
 return (
     <>
-   
-    <div className="container-fluid songListCont row">
-      <div className=" song-row ">
-          
-          <div className="col-sm coll">
+<div className="container-fluid row">
+     <div className="song-row"> 
+        <div className="row ">
+    
           <div className="col img-col">
-              <img  className="song-img  mx-auto" alt="song" variant="bottom"  src={trackList.album.images[0].url} />
+              <img  className="song-img mx-auto" alt={trackList.name} variant="bottom"  src={trackList.album.images[0].url} />
           </div>
-
           <div className="col titles-col">
-              <h5 className="card-title "   data-bs-toggle="tooltip"  data-bs-title={trackList.name}>  {trackList.name} </h5>
-              <p className="artist-title cardsub-title">  {trackList.artists[0].name} </p>
-          </div>
+              <h4 className="card-title "   data-bs-toggle="tooltip"  data-bs-title={trackList.name}>  {trackList.name} </h4>
+              <h5 className="subtitle">  {trackList.artists[0].name} </h5>
           </div>
 
-          <div className="col-sm audioplayerDIV ">
+   
+        </div>
+        
+        <div className="col audioplayerDIV ">
               <AudioPlayer trackList={trackList}  />        
-          </div>    
-      </div>
+        </div>    
+    </div> 
 
 
-    </div>
+</div>
     </>
     );
 }

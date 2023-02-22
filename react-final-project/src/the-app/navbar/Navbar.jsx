@@ -35,7 +35,7 @@ export function Navbar({logout}){
 <nav className="navbar sticky-top navbar-expand-sm navbar-expand-xs bg-color">    
 <div className="container-fluid">
       <img className="brand-icon" src={logo} alt="logo" /> 
-      <NavLink to="/" className="navbar-brand" >Bengloffyy</NavLink>
+      <NavLink to="/" className="navbar-brand" >LoveSong</NavLink>
 
 
       <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"

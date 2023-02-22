@@ -8,18 +8,30 @@
 
 .nav-link{
     color:black;
+    color:#BD0700;
     margin-right:15px;
+    font-size: 20px; 
+}
+
+.nav-link:hover, .nav-link:active{
+    color:#BD0700;
+    font-weight: bold;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-    color:#700400;
+    
+    color:#BD0700;
+    color:#1EBA55;
+    font-weight: bold;
+    font-size: 20px; 
 }
+
 
 
 .navbar-brand{
     color:#700400;
-    font-size: 30px;
-    font-family: 'Karla', sans-serif;
+    color:#BD0700;
+     font-size: 25px; 
     padding-left: 10px;
 }
 
@@ -33,6 +45,8 @@
 .navbar-brand:hover, .navbar-brand:focus {
   background-color: transparent;
   color:#700400;
+  color:#BD0700;
+
 }
 
 
@@ -78,6 +92,20 @@
    
  
 }
+
+
+.dropdown-item:hover{
+    background-color:#1EBA55;
+    background-color: #700400;
+    background-color:#1EBA55;
+  } 
+
+
+.dropdown-item:focus{
+    background-color:#700400;
+    background-color:#1EBA55;
+  } 
+
 /*
 @media (max-width:207px){
     .navbar{
@@ -86,3 +114,4 @@
 
     } 
  }*/
+

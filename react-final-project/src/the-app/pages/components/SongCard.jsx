@@ -6,20 +6,20 @@ export function SongCard({dataTrack}){
   
 return(
 <>
-
+<div className="container-fluid">
 <div className="yousearched">
 <h5 className="title">You searched:</h5> 
 </div>
 
-<div className="songcard-container container-fluid row ">
+<div className=" row songcard">
 
   <div className="img-container col-sm"> 
-        <img className="songimg  " src={dataTrack.album.images[0].url} alt="searched song" />
+        <img className="songimg  mx-auto" src={dataTrack.album.images[0].url} alt="searched song" />
 
     <div className="songtext-container col-sm">
-          <h4 className="title titlesong"> {dataTrack.name} </h4>
-          <h5 className="title"> {dataTrack.album.name} </h5>
-          <h5 className="title"> {dataTrack.artists[0].name} </h5>
+          <h4 className="subtitle titlesong"> {dataTrack.name} </h4>
+          {/* <h5 className="subtitle"> {dataTrack.album.name} </h5> */}
+          <h5 className="subtitle"> {dataTrack.artists[0].name} </h5>
           {/*  <p> ID: {dataTrack.id} + </p>*/}
     </div>  
   </div> 
@@ -30,8 +30,8 @@ return(
    
 </div>
 
-<div className="yousearched">
+<div className="yousearched yousearched-bottom">
 <h5 className="title">Recommendations:</h5> 
 </div>
-
+</div>
 </>)}
